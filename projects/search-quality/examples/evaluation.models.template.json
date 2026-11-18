@@ -1,0 +1,85 @@
+{
+  "models": {
+    "openai": {
+      "protocol": "openai_responses",
+      "model": "REPLACE_WITH_YOUR_MODEL_ID",
+      "api_key_env": "OPENAI_API_KEY",
+      "output_mode": "json_schema",
+      "max_output_tokens": 4096,
+      "max_concurrency": 2,
+      "requests_per_second": 1
+    },
+    "compatible": {
+      "protocol": "openai_chat",
+      "base_url": "https://REPLACE_WITH_YOUR_HOST/v1",
+      "model": "REPLACE_WITH_YOUR_MODEL_ID",
+      "api_key_env": "COMPATIBLE_LLM_API_KEY",
+      "output_mode": "prompt",
+      "token_limit_field": "max_tokens"
+    },
+    "deepseek": {
+      "protocol": "openai_chat",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "token_limit_field": "max_tokens",
+      "max_output_tokens": 8192,
+      "output_mode": "json_object",
+      "timeout_seconds": 120,
+      "max_concurrency": 2,
+      "requests_per_second": 1
+    },
+    "claude": {
+      "protocol": "anthropic",
+      "model": "REPLACE_WITH_YOUR_MODEL_ID",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_output_tokens": 4096
+    },
+    "gemini": {
+      "protocol": "gemini",
+      "model": "REPLACE_WITH_YOUR_MODEL_ID",
+      "api_key_env": "GEMINI_API_KEY",
+      "max_output_tokens": 4096
+    },
+    "local": {
+      "protocol": "openai_chat",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "model": "REPLACE_WITH_INSTALLED_LOCAL_MODEL",
+      "token_limit_field": "max_tokens",
+      "max_concurrency": 1
+    }
+  },
+  "query_model": "openai",
+  "experiments": [
+    {
+      "id": "legacy-openai",
+      "scheme": "legacy_five_v1",
+      "model": "openai"
+    },
+    {
+      "id": "legacy-claude",
+      "scheme": "legacy_five_v1",
+      "model": "claude"
+    },
+    {
+      "id": "google-openai",
+      "scheme": "google_overview_v1",
+      "model": "openai"
+    },
+    {
+      "id": "google-claude",
+      "scheme": "google_overview_v1",
+      "model": "claude"
+    }
+  ],
+  "runtime": {
+    "max_workers": 4,
+    "max_input_chars": 180000
+  },
+  "approved_authority_domains": [],
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

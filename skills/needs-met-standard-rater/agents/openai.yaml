@@ -1,0 +1,4 @@
+interface:
+  display_name: "标准 Needs Met 评分"
+  short_description: "结合查询、结果块和落地页评估标准 Needs Met，保留五档定义及例外"
+  default_prompt: "请使用 $needs-met-standard-rater，根据查询、结果块和实际落地页证据完成标准 Needs Met 评分。"

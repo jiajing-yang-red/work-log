@@ -1,0 +1,752 @@
+{
+  "source": {
+    "title": "Search Quality Evaluator Guidelines",
+    "version": "September 11, 2025",
+    "pages": 182,
+    "sha256": "46aa9ea1fd004a09d68ececd7acdb18ec505061f52598fa69a856dfea94a6a06",
+    "user_supplied_file": "SearchQualityEvaluatorGuidelines.pdf",
+    "official_url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf",
+    "version_policy": "Pinned to the user-supplied PDF; no claim about the latest published version."
+  },
+  "skill_version": "1.0.0",
+  "sections": [
+    {
+      "section": "12.0",
+      "title": "Understanding Search Users, Queries, and Results",
+      "page": 94,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.1",
+      "title": "Important Rating Definitions and Ideas",
+      "page": 94,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.2",
+      "title": "Understanding the Query",
+      "page": 95,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.3",
+      "title": "Locale and User Location",
+      "page": 96,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.4",
+      "title": "Queries with an Explicit Location",
+      "page": 97,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.5",
+      "title": "Queries with Multiple Meanings",
+      "page": 98,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.6",
+      "title": "Query Meanings Can Change Over Time",
+      "page": 101,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7",
+      "title": "Understanding User Intent",
+      "page": 101,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7.1",
+      "title": "Know and Know Simple Queries",
+      "page": 102,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7.2",
+      "title": "Do Queries",
+      "page": 103,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7.3",
+      "title": "Website Queries",
+      "page": 104,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7.4",
+      "title": "Visit-in-Person Queries and User Location",
+      "page": 105,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.7.5",
+      "title": "Queries with Multiple User Intents",
+      "page": 107,
+      "files": [
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "查询含义、意图、解释可能性、位置、时点、研究与关键限定",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.8",
+      "title": "Understanding Result Blocks",
+      "page": 108,
+      "files": [
+        "references/result-and-quality.md",
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "网页/SCRB 类型与交互/时延假设，不能从摘要推断落地页",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.8.1",
+      "title": "Web Search Result Block Examples",
+      "page": 108,
+      "files": [
+        "references/result-and-quality.md",
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "网页/SCRB 类型与交互/时延假设，不能从摘要推断落地页",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "12.8.2",
+      "title": "Special Content Result Block Examples",
+      "page": 109,
+      "files": [
+        "references/result-and-quality.md",
+        "references/query-and-context.md"
+      ],
+      "retained_rule": "网页/SCRB 类型与交互/时延假设，不能从摘要推断落地页",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.0",
+      "title": "Rating Using the Needs Met Scale",
+      "page": 113,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.1",
+      "title": "Rating Result Blocks: Block Content and Landing Pages",
+      "page": 114,
+      "files": [
+        "SKILL.md",
+        "references/result-and-quality.md"
+      ],
+      "retained_rule": "标准、LP-only、Block-only 严格区分；标准按结果类型分流",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.1.1",
+      "title": "Landing Page Needs Met Ratings and Block Content Needs Met Ratings",
+      "page": 117,
+      "files": [
+        "SKILL.md",
+        "references/result-and-quality.md"
+      ],
+      "retained_rule": "标准、LP-only、Block-only 严格区分；标准按结果类型分流",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.2",
+      "title": "Fully Meets (FullyM)",
+      "page": 118,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.2.1",
+      "title": "Examples of Fully Meets (FullyM) Result Blocks",
+      "page": 118,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.2.2",
+      "title": "Examples of Queries that Cannot Have Fully Meets Results",
+      "page": 122,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.3",
+      "title": "Highly Meets (HM)",
+      "page": 123,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.3.1",
+      "title": "Examples of Highly Meets (HM) Result Blocks",
+      "page": 123,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.4",
+      "title": "Moderately Meets (MM)",
+      "page": 130,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.4.1",
+      "title": "Examples of Moderately Meets (MM) Result Blocks",
+      "page": 130,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.5",
+      "title": "Slightly Meets (SM)",
+      "page": 132,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.5.1",
+      "title": "Examples of Slightly Meets (SM) Result Blocks",
+      "page": 132,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.6",
+      "title": "Fails to Meet (FailsM)",
+      "page": 135,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "13.6.1",
+      "title": "Examples of Fails to Meet (FailsM) Result Blocks",
+      "page": 135,
+      "files": [
+        "SKILL.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "完整五主档定义、条件、限制与原案例边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "14.0",
+      "title": "The Relationship between Page Quality and Needs Met",
+      "page": 142,
+      "files": [
+        "references/result-and-quality.md",
+        "SKILL.md"
+      ],
+      "retained_rule": "PQ 独立于查询，NM 结合查询；极低质量、无用结果与明确导航例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.0",
+      "title": "Rating Porn, Foreign Language, and Did Not Load Results",
+      "page": 144,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.1",
+      "title": "Porn Flag",
+      "page": 144,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.2",
+      "title": "Needs Met Rating for Porn Results",
+      "page": 144,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.2.1",
+      "title": "Needs Met Rating for Clear Non-Porn Intent Queries",
+      "page": 144,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.2.2",
+      "title": "Needs Met Rating for Possible Porn Intent Queries",
+      "page": 145,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.2.3",
+      "title": "Needs Met Rating for Clear Porn Intent Queries",
+      "page": 145,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.3",
+      "title": "Reporting Illegal Images",
+      "page": 146,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.4",
+      "title": "Foreign Language Flag",
+      "page": 146,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.4.1",
+      "title": "Using the Foreign Language Flag",
+      "page": 146,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.4.2",
+      "title": "Needs Met Rating for Foreign Language Results",
+      "page": 147,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.5",
+      "title": "Did Not Load Flag",
+      "page": 149,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.5.1",
+      "title": "Using the Did Not Load Flag",
+      "page": 149,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.5.2",
+      "title": "Needs Met Rating and the Did Not Load Flag",
+      "page": 149,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "15.6",
+      "title": "Additional Flags in Some Rating Tasks",
+      "page": 151,
+      "files": [
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "标记不依赖查询、NM 依赖意图；色情/语言/加载、安全及联合PQ边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "16.0",
+      "title": "Many Types of Helpful Results",
+      "page": 152,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "多种内容格式、观点、深度均可有用；官网与到访双意图限制",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "16.1",
+      "title": "Rating Queries with Both Website and Visit-in-Person Intent",
+      "page": 152,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "多种内容格式、观点、深度均可有用；官网与到访双意图限制",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "17.0",
+      "title": "Specificity of Queries and Landing Pages",
+      "page": 154,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "依实际帮助而非具体性机械匹配",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "18.0",
+      "title": "Needs Met Rating and Freshness",
+      "page": 158,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "当前/历史时间、时效需求与PQ差异",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "19.0",
+      "title": "Misspelled and Mistyped Queries and Results",
+      "page": 160,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "明显误拼按意图，非明显人名尊重原文",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "19.1",
+      "title": "Misspelled and Mistyped Queries",
+      "page": 160,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "明显误拼按意图，非明显人名尊重原文",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "19.2",
+      "title": "Name Queries",
+      "page": 161,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "明显误拼按意图，非明显人名尊重原文",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "20.0",
+      "title": "Non-Fully Meets Results for URL Queries",
+      "page": 161,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "URL查询允许目标以外有用结果",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "21.0",
+      "title": "Product Queries: Importance of Browsing and Researching",
+      "page": 163,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "产品浏览、研究、视觉探索与交易信任",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "22.0",
+      "title": "Rating Visit-in-Person Intent Queries",
+      "page": 164,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "Visit-in-Person 距离随业务，位置可相关/无关",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "22.1",
+      "title": "Examples Where User Location Does (and Does Not) Matter",
+      "page": 165,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "Visit-in-Person 距离随业务，位置可相关/无关",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "23.0",
+      "title": "Rating English Language Results in Non-English Locales",
+      "page": 167,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "英语不设外语标记但仍可能对当地用户无用，转写/技术/官网例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "23.1",
+      "title": "Examples of English (and Non-English) Results in Non-English Locales",
+      "page": 168,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "英语不设外语标记但仍可能对当地用户无用，转写/技术/官网例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "24.0",
+      "title": "Rating Dictionary and Encyclopedia Results for Different Queries",
+      "page": 172,
+      "files": [
+        "references/query-and-context.md",
+        "references/boundary-cases.md"
+      ],
+      "retained_rule": "词典百科按实际意图而非主题相同给高分",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    }
+  ],
+  "supplement": [
+    {
+      "section": "25.0",
+      "title": "Overview",
+      "page": 175,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "项目要求与本地执行范围"
+    },
+    {
+      "section": "26.0",
+      "title": "Acquiring Tasks",
+      "page": 175,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "平台账户/领任务 UI 不属于技能评分能力，不复制"
+    },
+    {
+      "section": "27.0",
+      "title": "Rating Tasks Using the Rating Interface",
+      "page": 175,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "加载与提交前完整性校验；本地输出不等于外部提交"
+    },
+    {
+      "section": "28.0",
+      "title": "Releasing Tasks",
+      "page": 176,
+      "files": [
+        "references/query-and-context.md",
+        "references/output.md"
+      ],
+      "retained_rule": "研究后专业能力不足/任务故障，记录原因不强给分"
+    },
+    {
+      "section": "29.0",
+      "title": "Understanding the User Location on the Task Page",
+      "page": 178,
+      "files": [
+        "references/query-and-context.md",
+        "references/output.md"
+      ],
+      "retained_rule": "精确/近似/未知位置与地图图钉区别"
+    },
+    {
+      "section": "30.0",
+      "title": "Reporting Duplicate Results in Tasks",
+      "page": 178,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "按query和内容识别重复；保留输入、不按URL自动删除"
+    },
+    {
+      "section": "30.1",
+      "title": "Pre-Identified Duplicates",
+      "page": 178,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "按query和内容识别重复；保留输入、不按URL自动删除"
+    },
+    {
+      "section": "30.2",
+      "title": "Rater-Identified Duplicates",
+      "page": 179,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "按query和内容识别重复；保留输入、不按URL自动删除"
+    },
+    {
+      "section": "30.3",
+      "title": "Reporting Duplicate Results",
+      "page": 180,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "按query和内容识别重复；保留输入、不按URL自动删除"
+    },
+    {
+      "section": "31.0",
+      "title": "Simplified Needs Met Tasks",
+      "page": 181,
+      "files": [
+        "references/output.md"
+      ],
+      "retained_rule": "上下文结果无需评分"
+    }
+  ],
+  "other_dependencies": [
+    {
+      "sections": "0.2–0.6",
+      "pages": "7–8",
+      "files": [
+        "SKILL.md",
+        "references/query-and-context.md",
+        "references/result-and-quality.md",
+        "references/flags-and-access.md"
+      ],
+      "retained_rule": "地区用户视角、安全、未篡改体验、历史示例快照"
+    },
+    {
+      "sections": "2.3;3.2–3.4;4.0–4.6",
+      "pages": "11–13;21–44",
+      "files": [
+        "references/result-and-quality.md"
+      ],
+      "retained_rule": "NM适用的YMYL、准确性、信任、伤害、不可信与垃圾标准；正式PQ需完整PQ规范"
+    }
+  ],
+  "interpretation": "Source-to-rule index and semantic review; not a scoring-accuracy certification."
+}

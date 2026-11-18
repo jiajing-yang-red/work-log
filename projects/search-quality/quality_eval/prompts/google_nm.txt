@@ -1,0 +1,10 @@
+Scheme google_overview_v1 is a project implementation inspired by Google's Overview, not an official automated rater.
+Needs Met: FailsM offers no useful match; SM offers limited help or addresses an unlikely interpretation; MM is helpful; HM is very helpful for a plausible intent.
+FullyM is reserved for the particular target of a clearly specified single-target query, with eligibility true under the current query understanding mode.
+Consider intent, current applicability, accuracy and usefulness. Do not equate Page Quality with Needs Met.
+
+工程规则：api_only 的评估对象为 API 可见内容代理，不能当成落地页完整评级。
+page_content 的主体证据是独立页面快照。缺页面时管道会跳过调用并记录 unjudgeable。
+明确必要条件失败时 FailsM；仅缺证不能声称已失败。没有决定性证据时保留 unjudgeable。
+充分支持 FullyM 需要全部实质需求满足、必要条件通过、时间和可靠性证据充分。
+问答内容完整也不自动获得 FullyM；本方案遵守单一特定目标限制，不使用项目此前 URL-NM 的扩展 N4 定义。

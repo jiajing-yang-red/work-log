@@ -1,0 +1,44 @@
+{
+  "models": {
+    "deepseek": {
+      "protocol": "openai_chat",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "token_limit_field": "max_tokens",
+      "max_output_tokens": 8192,
+      "output_mode": "json_object",
+      "timeout_seconds": 120,
+      "max_concurrency": 32,
+      "requests_per_second": 16,
+      "parameters": {
+        "temperature": 0
+      }
+    }
+  },
+  "query_model": "deepseek",
+  "experiments": [
+    {
+      "id": "legacy-deepseek",
+      "scheme": "legacy_five_v1",
+      "model": "deepseek",
+      "mode": "api_only"
+    },
+    {
+      "id": "google-deepseek",
+      "scheme": "google_overview_v1",
+      "model": "deepseek",
+      "mode": "api_only"
+    }
+  ],
+  "runtime": {
+    "max_workers": 32,
+    "max_input_chars": 180000
+  },
+  "approved_authority_domains": [],
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "date": "2026-11-04",
+  "before_version": "1.0.0",
+  "after_version": "1.0.1",
+  "baseline": "Google Search Quality Evaluator Guidelines, September 11, 2025",
+  "source": "SearchQualityEvaluatorGuidelines.pdf",
+  "source_sha256": "46aa9ea1fd004a09d68ececd7acdb18ec505061f52598fa69a856dfea94a6a06",
+  "scope": "Part 1 第 1.0–11.0 节、表格、示例及 FAQ；关联前置标记与 PQ/Needs Met 边界。",
+  "conclusion": "v1.0.0 主体框架基本对齐，但不能称为完全准确或无遗漏。本轮发现 8 处规则表述/流程问题和 4 处明示细则不足，均已修正或补足。对修订版未再发现本次核对范围内的实质性缺口。",
+  "findings": [
+    {
+      "id": "F01",
+      "kind": "finding",
+      "title": "Medium 混合质量条件被收窄",
+      "file": "SKILL.md",
+      "before_line": 101,
+      "after_line": 101,
+      "before_excerpt": "同时有一个或一些轻度 Low 特征",
+      "source_sections": [
+        "6.1",
+        "9.3"
+      ],
+      "source_pages": [
+        69,
+        89
+      ],
+      "source_meaning": "High 特征可以与一个 Low 特征，或一些轻度 Low 特征并存。单个 Low 特征不限定为轻微；芭蕾舞鞋论坛例中 Ads/SC 已显著干扰，仍为 Medium。",
+      "impact": "可能把原文允许 Medium 的混合页面压低为 Low。",
+      "correction": "明确两种情况的并列关系，并保留不抵消 Lowest、伤害或必要 E-E-A-T 缺失的限制。",
+      "status": "fixed"
+    },
+    {
+      "id": "F02",
+      "kind": "finding",
+      "title": "欺骗的证据门槛前后不一致",
+      "file": "references/lowest.md",
+      "before_line": 58,
+      "after_line": 58,
+      "before_excerpt": "已确认使用欺骗的页面或网站应 Lowest。",
+      "source_sections": [
+        "4.5",
+        "4.5.3",
+        "4.5.5"
+      ],
+      "source_pages": [
+        35,
+        36,
+        38
+      ],
+      "source_meaning": "有依据地强烈怀疑欺骗或恶意行为时应 Lowest；高度不可信不需要先证明造成伤害。",
+      "impact": "总规则允许强烈怀疑，具体条款却要求已确认，可能漏判高度不可信页面。",
+      "correction": "统一为具体观察足以支持强烈怀疑即可；不要求证实主观意图或实际损失，同时禁止凭空怀疑。",
+      "status": "fixed"
+    },
+    {
+      "id": "F03",
+      "kind": "finding",
+      "title": "极负面网站声誉的适用范围和强度不足",
+      "file": "SKILL.md",
+      "before_line": 55,
+      "after_line": 55,
+      "before_excerpt": "已确认的极端恶意网站声誉可使其所有页面成为 Lowest。",
+      "source_sections": [
+        "4.5.2"
+      ],
+      "source_pages": [
+        36
+      ],
+      "source_meaning": "可信的极负面或恶意网站声誉可使整个网站不可信，原文示例要求该网站所有页面 Lowest；声誉问题未必足以归为有害行为。",
+      "impact": "旧文把整体网站规则缩为极端恶意，并用“可”弱化，可能给其个别页面保留不适当的高分。",
+      "correction": "明确极负面或恶意声誉导致整站不可信时，所有页面应 Lowest；同时区分某一创作者与整个宿主平台。",
+      "status": "fixed"
+    },
+    {
+      "id": "F04",
+      "kind": "finding",
+      "title": "过期域名滥用增加了定义之外的必备证据",
+      "file": "references/lowest.md",
+      "before_line": 90,
+      "after_line": 88,
+      "before_excerpt": "关键是借用旧信任及排名、低价值和误导的实际证据。",
+      "source_sections": [
+        "4.6.3",
+        "4.7"
+      ],
+      "source_pages": [
+        40,
+        56
+      ],
+      "source_meaning": "定义是过期域名被购买并改作主要让新所有者获益、对用户几乎无价值的内容；旧域名高信任、借排名和用户困惑是常见表现。",
+      "impact": "可能因没有排名收益或用户被误导的证明而漏判。",
+      "correction": "分开定义与常见迹象；核实过期购买、改作何种用途及用户价值，不添加逐项证明排名或误导的要求。",
+      "status": "fixed"
+    },
+    {
+      "id": "F05",
+      "kind": "finding",
+      "title": "规模化内容滥用把典型迹象变成必要条件",
+      "file": "references/lowest.md",
+      "before_line": 112,
+      "after_line": 112,
+      "before_excerpt": "且缺少足够编辑／人工筛选，是本类。",
+      "source_sections": [
+        "4.6.5"
+      ],
+      "source_pages": [
+        42
+      ],
+      "source_meaning": "核心是大量生成页面，主要让所有者获益而非帮助用户；低投入、非原创、低增值、缺少编辑是典型表现，并非一组必须同时成立的要件。",
+      "impact": "可能把做过少量编辑的规模化垃圾内容排除在 Lowest 之外。",
+      "correction": "将定义与典型表现分开，明确少量编辑不免责、数量本身也不构成滥用。",
+      "status": "fixed"
+    },
+    {
+      "id": "F06",
+      "kind": "finding",
+      "title": "Filler 遗漏了一条独立 Low 条件",
+      "file": "references/assessment.md",
+      "before_line": 61,
+      "after_line": 63,
+      "before_excerpt": "低投入且占据突出位置、阻挡核心内容的 filler 才是相应问题。",
+      "source_sections": [
+        "5.2.2"
+      ],
+      "source_pages": [
+        62
+      ],
+      "source_meaning": "大量低质、无帮助的 filler 造成糟糕体验，或大量突出的 filler 使有帮助的 MC 难找，均可 Low。",
+      "impact": "即使核心内容可找到，大量无帮助填充仍可能造成糟糕体验；旧文容易漏掉此情形。",
+      "correction": "两类条件分别列出，补足核心 MC 接近顶部、支持性内容放在较低位置的要求。",
+      "status": "fixed"
+    },
+    {
+      "id": "F07",
+      "kind": "finding",
+      "title": "特定 AI 实验案例的前提被省略",
+      "file": "references/lowest.md",
+      "before_line": 60,
+      "after_line": 60,
+      "before_excerpt": "表面服务大众，实际声明只是可能有错且未经可靠保障的实验内容",
+      "source_sections": [
+        "4.7"
+      ],
+      "source_pages": [
+        46
+      ],
+      "source_meaning": "育儿网站对外称向父母提供信息，条款却称仅供 AI 爱好者做概念验证、不面向公众；哪些文章有错或过时也不明，形成目的和信任上的实质矛盾。",
+      "impact": "旧文抽象过度，可能把正常披露 AI、局限或建议核查也视为目的欺骗。",
+      "correction": "恢复特定案例的受众、用途矛盾与高信任前提；明确单纯披露局限并非欺骗。",
+      "status": "fixed"
+    },
+    {
+      "id": "F08",
+      "kind": "finding",
+      "title": "执行顺序没有真正把伤害筛查前置",
+      "file": "SKILL.md",
+      "before_line": 28,
+      "after_line": 27,
+      "before_excerpt": "4. **查阅实际 MC、功能和独立声誉。**",
+      "source_sections": [
+        "3.0",
+        "4.0",
+        "4.5.5",
+        "11.0"
+      ],
+      "source_pages": [
+        19,
+        29,
+        38,
+        92
+      ],
+      "source_meaning": "先判断真实目的及潜在伤害，再处理其余质量；遇到恶意证据停止互动。",
+      "impact": "文字总则正确，但步骤先全面调查、后检查 Lowest，可能导致不必要且不安全的继续访问。",
+      "correction": "增加目的识别后的前置筛查，后续调查再复核；不要求在危险页面完成其他步骤。",
+      "status": "fixed"
+    },
+    {
+      "id": "C01",
+      "kind": "clarification",
+      "title": "E-E-A-T 依据是一类或多类，不要求三类齐全",
+      "file": "references/assessment.md",
+      "before_line": 87,
+      "after_line": 89,
+      "before_excerpt": "结合三类证据：",
+      "source_sections": [
+        "3.4"
+      ],
+      "source_pages": [
+        27
+      ],
+      "source_meaning": "自述、他人评价、页面可见证据可有一类或多类参与判断。",
+      "impact": "避免把证据类别目录误读成必须全部取得正面证据。",
+      "correction": "明确一类或多类；仍保留所有正常 PQ 任务开展声誉调查的要求。",
+      "status": "clarified"
+    },
+    {
+      "id": "C02",
+      "kind": "clarification",
+      "title": "补足声誉来源的争议与过时提示",
+      "file": "references/assessment.md",
+      "before_line": 71,
+      "after_line": 73,
+      "before_excerpt": "阅读可信独立评价、专家推荐",
+      "source_sections": [
+        "3.3.3"
+      ],
+      "source_pages": [
+        23
+      ],
+      "source_meaning": "用于调查声誉的文章如提示存在争议或已过时，可能需要进一步研究。",
+      "impact": "旧文没有明确列出这一补查触发条件。",
+      "correction": "补充来源注明争议或过时时进一步核查。",
+      "status": "clarified"
+    },
+    {
+      "id": "C03",
+      "kind": "clarification",
+      "title": "补足页面可有多个目的",
+      "file": "references/assessment.md",
+      "before_line": 15,
+      "after_line": 15,
+      "before_excerpt": "分享个人经历、观点、感情、媒体",
+      "source_sections": [
+        "2.2"
+      ],
+      "source_pages": [
+        10
+      ],
+      "source_meaning": "一个页面可因一个或多个目的而创建。",
+      "impact": "旧文列举多种目的，但没有明示单页可同时具有多个目的。",
+      "correction": "明确页面可能有一个或多个目的。",
+      "status": "clarified"
+    },
+    {
+      "id": "C04",
+      "kind": "clarification",
+      "title": "补足低风险个人站点的最少联系信息例外",
+      "file": "references/assessment.md",
+      "before_line": 14,
+      "after_line": 14,
+      "before_excerpt": "合理个人匿名、长期用户名或别名可接受",
+      "source_sections": [
+        "5.5"
+      ],
+      "source_pages": [
+        63
+      ],
+      "source_meaning": "非 YMYL 个人网站或论坛讨论，仅邮箱或社交链接可能足够。",
+      "impact": "旧文已有匿名和别名例外，但该联系方式边界没有明示。",
+      "correction": "补入例外，并限定不作为交易网站客服充分性的通用标准。",
+      "status": "clarified"
+    }
+  ],
+  "confirmed": [
+    [
+      "评价对象",
+      "实际页面实现目的的程度；不按 query 的满足程度评分",
+      "1.0 / 14.0"
+    ],
+    [
+      "量表",
+      "五主档及四个中间档；中间档不是置信度标记",
+      "3.0"
+    ],
+    [
+      "最低档优先",
+      "伤害、不可信、欺骗和垃圾不能被名气或其他优点抵消",
+      "3.0 / 4.0"
+    ],
+    [
+      "高档门槛",
+      "基础条件＋MC／声誉／E-E-A-T 至少一项达到相应程度",
+      "7.0 / 8.0"
+    ],
+    [
+      "信任优先",
+      "Trust 为中心；必要 E-E-A-T 不足不能由声誉补偿",
+      "3.4 / 5.1"
+    ],
+    [
+      "YMYL",
+      "风险连续、经验与专家信息的目的区别、安全和共识限制",
+      "2.3 / 3.4.1 / 11.0"
+    ],
+    [
+      "声誉",
+      "必须调查；无可查声誉本身不高不低；流量不是声誉",
+      "3.3 / 7.2 / 8.2"
+    ],
+    [
+      "伤害例外",
+      "保留指定群体、善意报道／教育／艺术、合理争论等边界",
+      "4.2–4.4"
+    ],
+    [
+      "内容滥用",
+      "第三方、AI、转载本身不等于低质量；保留七类站点声誉滥用反例",
+      "4.6.4–4.6.7"
+    ],
+    [
+      "特殊页",
+      "百科、论坛新帖、错误页、登录页、非 HTML 和付费限制分别处理",
+      "8.4 / 9.0–10.1"
+    ],
+    [
+      "前置退出",
+      "Porn、Foreign Language、DNL、受限 MC 不评分；英语不使用外语退出标记",
+      "10.1"
+    ],
+    [
+      "决策规则",
+      "两个档位难定取低、三个取中；不能替代取证，不按网站国家扣分",
+      "10.0"
+    ]
+  ],
+  "manual_boundary_checks": [
+    {
+      "scenario": "显著广告干扰＋有价值的一手经验与高 E-E-A-T 讨论",
+      "expected_rule_application": "可为混合 Medium；不能把单个 Low 条件限定成轻微",
+      "source": "6.1 / 9.3；pp.69,89",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "同样优点但混入可能阻止救命治疗的建议",
+      "expected_rule_application": "Lowest；Medium 补偿不覆盖伤害",
+      "source": "4.2 / 11.0；pp.32,92",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "知名站点的专业建议缺少必要 E-E-A-T",
+      "expected_rule_application": "Low 或达到更严重条件时 Lowest；名气不能补偿",
+      "source": "5.1；p.60",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "没有网站外部声誉，但 MC 极出色且适当信任充分",
+      "expected_rule_application": "未找到声誉不阻止 High / Highest，仍须开展调查",
+      "source": "7.2 / 8.2；pp.72,78",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "只有一项非常高质量特征，所有基础条件成立且极好实现目的",
+      "expected_rule_application": "可 Highest；不能要求 MC、声誉、E-E-A-T 三者都极高",
+      "source": "8.0；p.77",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "具体观察足以强烈怀疑欺骗，但尚无实际损失证明",
+      "expected_rule_application": "Lowest；不要求亲身受害或取得动机自认",
+      "source": "4.5；p.35",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "可信极负面声誉使整个网站不可信，某页外观正常",
+      "expected_rule_application": "该网站所有页面 Lowest；不是只降有直接恶意内容的页",
+      "source": "4.5.2；p.36",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "过期域名购买及低价值获利用途已证实，无排名提升数据",
+      "expected_rule_application": "成立的过期域名滥用仍 Lowest",
+      "source": "4.6.3；p.40",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "大量低价值页面主要为所有者获益，做过少量人工编辑",
+      "expected_rule_application": "编辑不是豁免；成立的规模化滥用 Lowest",
+      "source": "4.6.5；p.42",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "核心内容能找到，但大量低质填充造成糟糕体验",
+      "expected_rule_application": "符合 filler 的第一条 Low 条件；无需重复证明难找",
+      "source": "5.2.2；p.62",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "正确披露 AI 和局限，面向受众及用途一致",
+      "expected_rule_application": "不凭免责声明判欺骗；继续按实际质量评",
+      "source": "4.7 / 4.6.6；pp.46,43（条件反例）",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "清楚、可信的银行登录入口 vs 登录后不可见的账户内容",
+      "expected_rule_application": "入口本身可 Highest；隐藏 MC 受限时不评分",
+      "source": "8.4 / 10.1；pp.83,91",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "定制 404 有帮助 vs 临时缺 MC 但导航正常 vs 全空白",
+      "expected_rule_application": "分别可 Medium/High/Highest、通常 Low、not_rated",
+      "source": "9.2 / 10.1；pp.85–86,91",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "新发真实问题无人回复 vs 长期无有效回答",
+      "expected_rule_application": "无其他低质特征的新帖通常 Medium；长期无参与可 Low",
+      "source": "9.3；pp.87–88",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "合法联供或高价值改写 vs 几乎全量近零投入复用",
+      "expected_rule_application": "不因复用自动低分；后者适用 Lowest",
+      "source": "4.6.6；pp.42–43",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    },
+    {
+      "scenario": "仅摘要 / 明确恶意软件警告 / 高 PQ 但不相关 query",
+      "expected_rule_application": "分别证据不足 / Lowest 且停止 / PQ 不因 query 降低",
+      "source": "1.0 / 4.5.5 / 14.0；pp.9,38,142–143",
+      "result": "修订后规则可明确支持该判断；人工规则复核，非模型运行结果"
+    }
+  ],
+  "limits": [
+    "75 个章节映射仅证明索引覆盖，不能证明逐条语义、评分准确率或模型稳定性。",
+    "此次是同一审查者对本地固定版本的人工审阅，未执行独立盲测或真实网页评分。",
+    "没有将外链 Search Essentials 的所有条款另行全文编入，也没有宣称已对齐官网未来或最新版本；正文保留识别出适用垃圾手法应 Lowest 的规则。",
+    "0–4/半分编码、JSON、insufficient_evidence 和证据包是本地执行约定，不是 Google 新增的质量档位或原生接口。",
+    "41 个边界案例是条件释义，不是全部原文截图的复刻或人工金标数据集。"
+  ],
+  "extra_correction": "同时把“已识别其他垃圾手法时检查 Lowest”明确为成立时使用 Lowest，避免弱化第 4.6 节的执行要求。"
+}

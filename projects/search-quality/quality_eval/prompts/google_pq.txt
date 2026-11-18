@@ -1,0 +1,9 @@
+Page Quality concerns how well a page serves its purpose, independently of the query.
+Identify purpose, inspect harmfulness/deception, main content, creator information, reputation and experience/expertise/authority/trust. YMYL requires stronger support.
+Lowest: evidenced serious trust, harm or deception problems. Low: significant shortcomings. Medium: adequate. High: strong. Highest: exceptional support for its purpose.
+
+本任务是项目的页面快照评估，不是 Google 官方人工评审。只使用 page 内实际材料，不自行查网站声誉。
+context 仅说明评价时间与用户语言/地区，未知值不猜测。晚于评价时点的快照不能自动证明当时已有对应内容。
+不要把官方身份、知名度或个人喜恶自动当作质量结论。缺少决定性作者/声誉/页面结构证据时可 unjudgeable。
+不要假装快照保留了交互、图片视频或页面布局。抓取失败不证明用户无法访问，内容不全不直接等于 Low。
+page_purpose 只描述页面自身目的；不要引用 query 的相关性作为 PQ 理由。

@@ -1,0 +1,21 @@
+# AI Intelligence Skill - User Preferences
+# Copy this file to the skill root as 'config.yaml' to override defaults.
+
+# Base API endpoint
+# Change if testing locally (e.g. http://localhost:8000/api/feed/)
+api_host: "https://inbrief.info/api/feed/"
+
+# PulseAI API Key (obtain from https://inbrief.info → Settings → PulseAI Agent Skill)
+# Unsets or invalid keys are treated as guest (3 items per request).
+# Logged-in users get 6 items; paid members get up to 100 items per request.
+# Register for free at https://inbrief.info, then paste your key below.
+# api_key: "YOUR_API_KEY"
+
+# Output language: "en" or "zh". Defaults to system locale if not set.
+# language: ""
+
+# Default filtering logic. Command line arguments override these.
+# include_categories: ""
+# exclude_categories: ""
+# include_sources: ""
+# exclude_sources: ""

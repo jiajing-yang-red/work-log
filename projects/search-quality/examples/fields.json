@@ -1,0 +1,15 @@
+{
+  "fields": {
+    "query_id": "qid",
+    "query_text": "query",
+    "rank": "position",
+    "url": "link",
+    "snippet": "summary",
+    "reported_result_count": "total"
+  },
+  "defaults": {
+    "search_run_id": "demo-csv-v1",
+    "provider": "demo",
+    "requested_top_k": 10
+  }
+}

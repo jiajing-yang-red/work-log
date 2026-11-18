@@ -1,0 +1,3 @@
+qid,query,position,link,title,summary,status,total
+q1,ExampleDB installation,1,https://example.com/install,ExampleDB installation,Synthetic installation guide,ok,1
+q2,ExampleDB latest release,,,,,empty,0

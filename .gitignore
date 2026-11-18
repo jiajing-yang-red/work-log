@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+/projects/output/
+/projects/search-eval/reports/
+/skills/ai-news-skill/config.yaml

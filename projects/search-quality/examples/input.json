@@ -1,0 +1,62 @@
+{
+  "queries": [
+    {
+      "query_id": "q1",
+      "query_text": "ExampleDB installation documentation",
+      "language": "en",
+      "request_frequency": 1
+    },
+    {
+      "query_id": "q2",
+      "query_text": "ExampleDB latest release"
+    },
+    {
+      "query_id": "q3",
+      "query_text": "ExampleDB export API"
+    }
+  ],
+  "search_runs": [
+    {
+      "search_run_id": "demo-v1",
+      "provider": "demo",
+      "system_version": "example-1",
+      "requested_top_k": 10,
+      "query_scope": ["q1", "q2", "q3"],
+      "collection_completed_at": "2026-10-20T13:36:00+08:00"
+    }
+  ],
+  "responses": [
+    {
+      "query_id": "q1",
+      "search_run_id": "demo-v1",
+      "status": "ok",
+      "http_status": 200,
+      "retrieved_at": "2026-10-20T13:35:00+08:00",
+      "reported_result_count": 2,
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://example.com/docs/install",
+          "title": "ExampleDB installation",
+          "snippet": "Synthetic example: install ExampleDB using the package manager.",
+          "source_score": 0.83
+        },
+        {
+          "rank": 2,
+          "url": "https://example.com/docs/install",
+          "title": "ExampleDB installation",
+          "snippet": "Synthetic example: install ExampleDB using the package manager.",
+          "source_score": 0.61
+        }
+      ]
+    },
+    {
+      "query_id": "q2",
+      "search_run_id": "demo-v1",
+      "status": "ok",
+      "http_status": 200,
+      "reported_result_count": 0,
+      "results": []
+    }
+  ]
+}

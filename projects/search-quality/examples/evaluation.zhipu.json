@@ -1,0 +1,47 @@
+{
+  "models": {
+    "zhipu": {
+      "protocol": "openai_chat",
+      "model": "glm-4.7-flash",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "api_key_env": "ZHIPU_API_KEY",
+      "token_limit_field": "max_tokens",
+      "max_output_tokens": 16384,
+      "output_mode": "json_object",
+      "stream": true,
+      "stream_include_usage": false,
+      "timeout_seconds": 120,
+      "stream_timeout_seconds": 600,
+      "max_concurrency": 1,
+      "requests_per_second": 1,
+      "catalog_models": [
+        "glm-4.7-flash"
+      ],
+      "parameters": {
+        "temperature": 0,
+        "thinking": {
+          "type": "enabled"
+        }
+      }
+    }
+  },
+  "query_understanding": "direct",
+  "experiments": [
+    {
+      "id": "answerability-zhipu",
+      "scheme": "answerability_only_v1",
+      "model": "zhipu",
+      "mode": "api_only"
+    }
+  ],
+  "runtime": {
+    "max_workers": 4,
+    "max_input_chars": 180000
+  },
+  "approved_authority_domains": [],
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

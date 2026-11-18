@@ -1,0 +1,4 @@
+interface:
+  display_name: "URL 正文抓取"
+  short_description: "抓取单条或批量 URL 正文，支持多通道补抓、断点续跑、内容校验和来源记录"
+  default_prompt: "使用 $url-body-fetcher 抓取这些 URL 的实际正文，保留原始字段、抓取证据和未取得正文的原因。"

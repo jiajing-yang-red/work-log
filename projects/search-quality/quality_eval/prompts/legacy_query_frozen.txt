@@ -1,0 +1,5 @@
+当前使用独立解析并冻结的 query_spec。
+按原始 query 核对冻结意图，选择合理的 intent_id，逐项覆盖其全部 requirements 和 hard_constraints；不把偏好升级为硬约束，不用候选结果缩减需求。
+明确实体、事件、版本、地点、指定来源、格式和时间要求必须保留。解析记录的 needs_clarification 只提示歧义，不作为跳过整个评分的理由；根据可见证据保守裁决并说明解释。
+freshness_type 和 freshness_applicable 以冻结说明为准，F1–F4 必须适用时效；与原始 query 冲突属于需求解析问题，应在 reason 中如实指出，不能编造事实或偷偷改需求。
+FullyM 资格属于另一套评估方案，不影响旧体系可回答性 3 分资格；一般问答、比较或研究任务满足本方案全部要求也可给 3。

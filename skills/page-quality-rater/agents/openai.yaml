@@ -1,0 +1,4 @@
+interface:
+  display_name: "Page Quality 页面质量评分"
+  short_description: "依据实际页面内容、网站背景、声誉及 E-E-A-T 评估页面质量，保留五档及中间档标准。"
+  default_prompt: "使用 $page-quality-rater 检查这些 URL 的实际页面、网站背景和独立声誉，按完整 PQ 标准评分并给出证据。"

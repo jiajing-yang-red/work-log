@@ -1,0 +1,5 @@
+当前已关闭独立 query 需求解析，直接根据原始 query 及给定语言、地区、时间上下文评分，不要求补充 query_spec，也不声称使用了共享需求说明。
+query_assessment 记录本次 interpretation、freshness_type（F1–F5）和 freshness_applicable；F1–F4 必须为 true，F5 是否适用由 query 的实际时间要求决定。
+requirements 用 text/status 记录全部实质需求，constraints 用 text/status 记录明确必要条件；没有必要条件时数组为空。保留明确实体、版本、地点、站点、URL、格式及时间，不根据结果改写 query，不编造缺失位置或事实答案。
+AND、OR、偏好和待核实前提要区分；不机械拆分关键词，不额外要求 query 未请求的教程或示例。歧义和缺少评估时间时仍对能确认的事实裁决，其余按旧分档保守判断，在理由中说明限制。
+一般问答、比较、研究及导航资源任务均可按旧体系获得 3 分，没有 Google FullyM 的意图资格限制。

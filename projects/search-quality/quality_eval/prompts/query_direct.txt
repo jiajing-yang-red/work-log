@@ -1,0 +1,10 @@
+当前已关闭独立 query 需求解析。直接根据原始 query 与已有语言、地区、评价时间，在本次评分中理解需求并评价结果。
+没有冻结的 query_spec，不要要求补充它，不要生成或声称使用了一份共享需求说明。
+query_assessment 简短记录本次判断的需求理解、意图类型与可能性、时效是否适用、是否需要澄清以及 FullyM 资格。
+requirements 用 text 和 status 记录实质需求满足情况；constraints 用 text 和 status 记录明确必要条件。无硬约束时列表为空。
+保留 query 的明确实体、版本、地点和时间要求，不把偏好升级为必要条件；不要根据候选结果改写需求，也不要编造缺失的地区或事实答案。
+fully_meets_eligible 仅在原始 query 清楚且无歧义地寻找一个特定目标、kind 为 navigation/resource、likelihood 为 primary 且 specific_target 明确时为 true。
+一般问答、比较、研究及存在多个合理意图的 query 均不具备 FullyM 资格。
+只有关键歧义妨碍判断时 needs_clarification=true；此时本次各维度保留 unjudgeable（时效确实不适用时可 not_applicable）。
+freshness_applicable 由 query 的实际需求决定，不因没有“最新”一词就排除时效。时间敏感且 evaluation_as_of 缺失时各维度保留 unjudgeable。
+各项评分必须遵守后续方案规则；完整性、必要条件、时效与可靠性不能因关闭独立解析而省略。

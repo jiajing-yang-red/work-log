@@ -1,0 +1,4 @@
+当前使用独立解析并冻结的 query_spec。
+必要条件只使用冻结 query_spec 中的要求，不把偏好升级为硬约束，不以文本长度替代判断。
+必须选择冻结的 intent_id，并逐项覆盖该意图全部 requirements 和 hard_constraints。
+时效是否适用以及 FullyM 资格以冻结 query_spec 为准，不自行修改。

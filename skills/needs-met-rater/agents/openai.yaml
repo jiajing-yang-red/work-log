@@ -1,0 +1,4 @@
+interface:
+  display_name: "Block Content Needs Met 评分"
+  short_description: "按五档完整定义、条件、限制和例外评估块文字，输出证据与置信度"
+  default_prompt: "使用 $needs-met-rater 按五档定义及其条件、限制和例外，依据 query、title、snippet 和 URL 评估 Block Content Needs Met，输出版本、分档、证据与置信度。"

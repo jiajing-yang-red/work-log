@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:needs-met-rater:output:4",
+  "title": "Block Content Needs Met output (provided text fields)",
+  "description": "Block Content Needs Met for the provided textual result block; no landing-page assessment. Numeric encoding and metadata are local implementation conventions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "skill_version",
+    "rating_mode",
+    "evidence_scope",
+    "score_scale",
+    "results"
+  ],
+  "properties": {
+    "skill_version": {
+      "const": "2.1.1"
+    },
+    "rating_mode": {
+      "const": "block_content_needs_met"
+    },
+    "score_scale": {
+      "const": {
+        "0": "FailsM",
+        "1": "SM",
+        "2": "MM",
+        "3": "HM",
+        "4": "FullyM"
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "input_index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "id": {},
+          "query": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "rated",
+              "insufficient_evidence"
+            ]
+          },
+          "intent": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interpretation": {
+            "enum": [
+              "dominant",
+              "common",
+              "reasonable_minor",
+              "unlikely_minor",
+              "no_chance",
+              "unclear"
+            ]
+          },
+          "score": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 4
+          },
+          "rating": {
+            "enum": [
+              "FailsM",
+              "SM",
+              "MM",
+              "HM",
+              "FullyM",
+              null
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              null
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "text"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "field": {
+                  "enum": [
+                    "title",
+                    "snippet",
+                    "url"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "needs_review": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "input_index",
+          "query",
+          "url",
+          "status",
+          "intent",
+          "interpretation",
+          "score",
+          "rating",
+          "confidence",
+          "reason",
+          "evidence",
+          "limitations",
+          "needs_review"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "rated"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "query": {
+                  "minLength": 1
+                },
+                "url": {
+                  "minLength": 1
+                },
+                "score": {
+                  "type": "integer"
+                },
+                "rating": {
+                  "type": "string"
+                },
+                "confidence": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "minItems": 1
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "score": {
+                  "type": "null"
+                },
+                "rating": {
+                  "type": "null"
+                },
+                "confidence": {
+                  "type": "null"
+                },
+                "needs_review": {
+                  "const": true
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "confidence": {
+                  "const": "low"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "needs_review": {
+                  "const": true
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "score": {
+                  "const": 0
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rating": {
+                  "const": "FailsM"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "score": {
+                  "const": 1
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rating": {
+                  "const": "SM"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "score": {
+                  "const": 2
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rating": {
+                  "const": "MM"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "score": {
+                  "const": 3
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rating": {
+                  "const": "HM"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "score": {
+                  "const": 4
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "rating": {
+                  "const": "FullyM"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "evidence_scope": {
+      "const": "provided_text_fields"
+    }
+  }
+}

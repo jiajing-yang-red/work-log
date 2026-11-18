@@ -1,0 +1,5 @@
+requests>=2.31,<3
+trafilatura>=2,<3
+lxml>=5,<7
+pypdf>=5,<7
+filelock>=3.13,<4

@@ -1,0 +1,38 @@
+{
+  "models": {
+    "ateve_jev": {
+      "protocol": "typesafe",
+      "model": "ateve-jev-v1",
+      "base_url": "https://tokendance.space/gateway/typesafe/v1",
+      "models_url": "https://tokendance.space/gateway/v1/models",
+      "api_key_env": "ATEVE_JEV_API_KEY",
+      "output_mode": "prompt",
+      "timeout_seconds": 120,
+      "max_concurrency": 32,
+      "requests_per_second": 16,
+      "max_attempts": 4,
+      "retry_base_seconds": 4,
+      "retry_max_seconds": 60,
+      "retry_wait_budget_seconds": 120,
+      "parameters": {}
+    }
+  },
+  "query_understanding": "direct",
+  "experiments": [
+    {
+      "id": "answerability-ateve-jev",
+      "scheme": "answerability_only_v1",
+      "model": "ateve_jev",
+      "mode": "api_only"
+    }
+  ],
+  "runtime": {
+    "max_workers": 32,
+    "max_input_chars": 180000
+  },
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

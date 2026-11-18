@@ -1,0 +1,854 @@
+{
+  "baseline_date": "2025-09-11",
+  "source_sha256": "46aa9ea1fd004a09d68ececd7acdb18ec505061f52598fa69a856dfea94a6a06",
+  "part1_toc_sections": 75,
+  "part1_section_mapping_count": 75,
+  "sections": [
+    {
+      "section": "1.0",
+      "title": "Introduction to Page Quality Rating",
+      "page": 9,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "PQ 评价实际页面实现目的的程度",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.0",
+      "title": "Understanding Webpages and Websites",
+      "page": 9,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "理解实际页面和所属网站",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.1",
+      "title": "Important Definitions",
+      "page": 9,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "页面、网站、独立子站、首页、所有者和创作者；AI 是工具而非档位",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.2",
+      "title": "Understanding the Purpose of a Webpage",
+      "page": 10,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "有益目的、多目的、商业与帮助并存；不按内容类型设等级",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.3",
+      "title": "Your Money or Your Life (YMYL) Topics",
+      "page": 11,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "YMYL 四类风险、影响对象、连续性、危害判断及经验与专业要求",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.4",
+      "title": "Understanding Webpage Content",
+      "page": 13,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "MC、SC、Ads 的功能性划分",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.4.1",
+      "title": "Identifying the Main Content (MC)",
+      "page": 13,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "标题、媒体、功能、用户内容、隐藏标签均可能是 MC",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.4.2",
+      "title": "Identifying the Supplementary Content (SC)",
+      "page": 14,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "SC 对体验的贡献及目的相关性",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.4.3",
+      "title": "Identifying Advertisements/Monetization (Ads)",
+      "page": 14,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "变现链接、动态广告、总体广告责任；广告有无不直接定档",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.4.4",
+      "title": "Summary of the Parts of the Page",
+      "page": 14,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "按实际作用组合判断，不把评论或标签固定分类",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.5",
+      "title": "Understanding the Website",
+      "page": 15,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "网站及创作者自述、独立证据与冲突处理",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.5.1",
+      "title": "Finding the Homepage",
+      "page": 15,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "相关首页、独立站点部分、多个合理首页及缺链接例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.5.2",
+      "title": "Finding Who is Responsible for the Website and Who Created the Content on the Page",
+      "page": 16,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "站点与创作者责任；机构、署名作者、账号与多人讨论",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "2.5.3",
+      "title": "Finding About Us, Contact Information, and Customer Service Information",
+      "page": 18,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "目的相关的身份、联系和客服信息；匿名、别名、支付退换及当地惯例",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.0",
+      "title": "Overall Page Quality Rating",
+      "page": 19,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "目的与伤害前置；九个刻度；原文 + 为相邻半档",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.1",
+      "title": "Page Quality Rating Considerations",
+      "page": 19,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "目的、伤害、YMYL、站点类型、责任信息、MC、标题、广告、声誉和信任",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.2",
+      "title": "Quality of the Main Content",
+      "page": 21,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "投入、原创性、才华技能、准确性、共识、实际功能和内容形式",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3",
+      "title": "Reputation of the Website and Content Creators",
+      "page": 22,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "所有可继续的正式 PQ 任务须调查独立且主题相关的声誉",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3.1",
+      "title": "Reputation of the Website",
+      "page": 22,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "真实用户及专家意见，独立来源、专业语境和流量统计边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3.2",
+      "title": "Customer Reviews as Reputation Information",
+      "page": 23,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "评价内容与可信度，正负评论都可伪造；少量普通差评不等于负面声誉",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3.3",
+      "title": "How to Search for Reputation Information about a Website",
+      "page": 23,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "搜索站点、域名、机构及创作者，排除自述并核查来源",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3.4",
+      "title": "Reputation of the Content Creators",
+      "page": 25,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "专业与非专业创作者，同行认可、引用、履历和非正式评论",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.3.5",
+      "title": "What to Do When You Find No Reputation Information",
+      "page": 25,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "无声誉中性，小站与普通人可高分，YMYL 重视其他证据",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.4",
+      "title": "Experience, Expertise, Authoritativeness, and Trust (E-E-A-T)",
+      "page": 26,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "E-E-A-T 四概念，Trust 优先，三类证据，利益冲突及其他信任因素",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "3.4.1",
+      "title": "YMYL Topics: Experience or Expertise?",
+      "page": 28,
+      "files": [
+        "references/assessment.md"
+      ],
+      "retained_rule": "YMYL 生活经验与专家信息的目的区别及安全、共识限制",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.0",
+      "title": "Lowest Quality Pages",
+      "page": 29,
+      "files": [
+        "SKILL.md",
+        "references/lowest.md"
+      ],
+      "retained_rule": "Lowest 总定义、前置必须条件及六维任一充分条件",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.1",
+      "title": "Types of Lowest Quality Pages",
+      "page": 31,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "有害、不可信、垃圾分类可重叠；争议和厌恶不自动最低",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.2",
+      "title": "Harmful to Self or Other Individuals",
+      "page": 32,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "个人伤害的完整类型、易受伤害人群、善意报道教育艺术例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.3",
+      "title": "Harmful to Specified Groups",
+      "page": 33,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "全部指定群体、严肃或恶意语气、思想批评与历史教育例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.4",
+      "title": "Harmfully Misleading Information",
+      "page": 34,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "有害误导三类、独立核查、合理争论及娱乐偏好微小错误例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5",
+      "title": "Untrustworthy Webpages or Websites",
+      "page": 35,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "高度不可信、重大多处错误、操纵；强烈怀疑与取证边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5.1",
+      "title": "Inadequate Information about the Website or Content Creator for the Purpose of the Page",
+      "page": 35,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "高信任责任和联系信息；完全缺失与普通不足区别",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5.2",
+      "title": "Lowest E-E-A-T and Lowest Reputation of the Website or Content Creator",
+      "page": 36,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "最低 E-E-A-T、极度不专业 YMYL 和可信极负面声誉",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5.3",
+      "title": "Deceptive Page Purpose, Deceptive Information about the Website, Deceptive Design",
+      "page": 36,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "目的、身份、资质、业务信息、按钮、导航和标题等欺骗",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5.4",
+      "title": "Deliberately Obstructed or Obscured MC",
+      "page": 38,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "故意遮挡或淹没 MC；可信登录、订阅、地域和非故意故障例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.5.5",
+      "title": "Suspected Malicious Behavior",
+      "page": 38,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "诈骗、钓鱼、恶意下载，强烈怀疑可最低；停止访问及警告区别",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6",
+      "title": "Spammy Webpages",
+      "page": 39,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "垃圾页面及已识别搜索垃圾手法；不把 SEO 或单一线索当定论",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.1",
+      "title": "Cannot Determine a Purpose, No MC, Little MC, Lowest Quality MC or No Added Value MC",
+      "page": 39,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "目的不可理解、故意无或极少 MC、最低质量及零增值",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.2",
+      "title": "Hacked, Defaced, or Spammed Pages",
+      "page": 39,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "入侵篡改及大量垃圾评论使原目的失效",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.3",
+      "title": "Expired Domain Abuse",
+      "page": 40,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "过期域名滥用定义、常见表现与必要条件的区别及历史核查",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.4",
+      "title": "Site Reputation Abuse",
+      "page": 41,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "站点声誉滥用的主要目的条件及七类非自动滥用例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.5",
+      "title": "Scaled Content Abuse",
+      "page": 42,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "规模化滥用的主要目的、典型低增值表现；编辑不是排除项；多页取证",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.6",
+      "title": "MC Created with Little to No Effort, Little to No Originality, and Little to No Added Value for Website Visitors",
+      "page": 42,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "全部或几乎全部复用、投入原创和增值；署名不免责、授权联供例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.6.7",
+      "title": "How to Determine if Content is Copied",
+      "page": 43,
+      "files": [
+        "references/lowest.md"
+      ],
+      "retained_rule": "句段搜索、动态旧源、轻改、改写、日期与档案对比",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "4.7",
+      "title": "Examples of Lowest Quality Pages",
+      "page": 45,
+      "files": [
+        "references/lowest.md",
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "核对全部示例，抽取事实错误、身份欺骗、伤害、垃圾及增值边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.0",
+      "title": "Low Quality Pages",
+      "page": 59,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "Low 定义、轻度伤害边界、各维度单项足以支持及网站类型无豁免",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.1",
+      "title": "Lacking E-E-A-T",
+      "page": 60,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "必要 E-E-A-T 不足不能被声誉或站点类型补偿",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.2",
+      "title": "Low Quality Main Content",
+      "page": 60,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "低投入内容、轻度事实错误、标题夸张；普通人艺术分享例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.2.1",
+      "title": "MC is Created with Low Effort, Low Originality and Low Added Value for Website Visitors",
+      "page": 61,
+      "files": [
+        "SKILL.md",
+        "references/lowest.md"
+      ],
+      "retained_rule": "低增值复用与近零增值 Lowest 的界线",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.2.2",
+      "title": "Filler as a Poor User Experience",
+      "page": 62,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "filler 的两类 Low 条件：糟糕体验或妨碍查找；有价值背景例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.3",
+      "title": "Distracting Ads/SC",
+      "page": 62,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "明显干扰、易关闭弹窗例外、性暗示怪诞或耸动的广告 SC 内容",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.4",
+      "title": "Mildly Negative Reputation of the Website or Content Creator",
+      "page": 62,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "轻度负面声誉及调查、少量评论和缺乏声誉的限制",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.5",
+      "title": "Unsatisfying Amount of Information about the Website or Content Creator",
+      "page": 63,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "目的相关的责任和客服信息不足；别名例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.6",
+      "title": "Exaggerated or Mildly Misleading Information about the Website or Content Creator",
+      "page": 63,
+      "files": [
+        "SKILL.md",
+        "references/lowest.md"
+      ],
+      "retained_rule": "轻度夸大与故意显著欺骗的 Low / Lowest 边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "5.7",
+      "title": "Examples of Low Quality Pages",
+      "page": 64,
+      "files": [
+        "SKILL.md",
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "核对所有低质示例；编辑错误、空泛建议、缺步骤、广告及 filler",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "6.0",
+      "title": "Medium Quality Pages",
+      "page": 68,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "Medium 完整基础条件、适当 MC、声誉及 E-E-A-T",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "6.1",
+      "title": "Types of Medium Quality Pages",
+      "page": 69,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "没有问题但不突出与混合质量两条路径及上下边界",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "6.2",
+      "title": "Examples of Medium Quality Pages",
+      "page": 69,
+      "files": [
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "百科、幽默、娱乐、食谱示例不升级为统一内容长度或评论数量门槛",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "7.0",
+      "title": "High Quality Pages",
+      "page": 71,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "High 基础条件与至少一项突出标准",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "7.1",
+      "title": "High Quality Main Content",
+      "page": 72,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "高 MC 投入原创技能准确性及与平均页面区别",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "7.2",
+      "title": "Positive Reputation",
+      "page": 72,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "主题相关正面声誉，非正式证据、平台归属与无声誉例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "7.3",
+      "title": "High Level of E-E-A-T",
+      "page": 73,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "高 E-E-A-T 随目的、主题、经验及信任要求变化",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "7.4",
+      "title": "Examples of High Quality Pages",
+      "page": 74,
+      "files": [
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "核对新闻、官方、幽默、商家、购物、视频、游戏、百科示例，不以形式替代质量",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "8.0",
+      "title": "Highest Quality Pages",
+      "page": 77,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "Highest 基础条件与至少一项非常突出的标准",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "8.1",
+      "title": "Very High Quality MC",
+      "page": 78,
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "新闻、艺术、信息内容的不同最高质量要求",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "8.2",
+      "title": "Very Positive Reputation",
+      "page": 78,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "非常正面声誉，专家推荐／奖项与非 YMYL 证据；无声誉例外",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "8.3",
+      "title": "Very High Level of E-E-A-T",
+      "page": 78,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md"
+      ],
+      "retained_rule": "独特权威、丰富经验或很高专业能力及主题相关信任",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "8.4",
+      "title": "Examples of Highest Quality Pages",
+      "page": 79,
+      "files": [
+        "references/page-types.md",
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "核对全部最高示例；登录、PDF、个人经验和艺术亦可最高",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "9.0",
+      "title": "Page Quality Criteria for Specific Types of Pages",
+      "page": 85,
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "特殊页面规则按类型适用",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "9.1",
+      "title": "Ratings for Encyclopedia Pages",
+      "page": 85,
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "百科站点声誉与条目自身研究、引用、准确性的共同要求",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "9.2",
+      "title": "Ratings for Pages with Error Messages or No MC",
+      "page": 85,
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "定制错误页、临时坏页、系统性空内容、真正未加载的不同处理",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "9.3",
+      "title": "Ratings for Forums and Q&A Pages",
+      "page": 87,
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "论坛 MC、访客视角、别名、新帖、长期无回复、混合质量及 YMYL 经验",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "10.0",
+      "title": "Page Quality Rating Tasks",
+      "page": 91,
+      "files": [
+        "SKILL.md",
+        "references/page-types.md"
+      ],
+      "retained_rule": "两个档位取低、三个取中；地域不扣分；非 HTML 与未穷尽情形",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "10.1",
+      "title": "Instructions for Rating Page Quality Tasks",
+      "page": 91,
+      "files": [
+        "references/page-types.md",
+        "references/output.md"
+      ],
+      "retained_rule": "前置退出、语言与未加载定义；PQ 网格和评论转为证据记录",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    },
+    {
+      "section": "11.0",
+      "title": "Page Quality Rating FAQs",
+      "page": 92,
+      "files": [
+        "SKILL.md",
+        "references/assessment.md",
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "外观不决定、个人意见、YMYL 经验、非正式专业、艺术目的、统一标准与插页",
+      "review": "rechecked_against_pinned_source_2026-11-07"
+    }
+  ],
+  "supplement": [
+    {
+      "section": "0.2–0.6",
+      "pages": "7–8",
+      "files": [
+        "SKILL.md",
+        "references/assessment.md",
+        "references/lowest.md",
+        "references/calibration-cases.md"
+      ],
+      "retained_rule": "地区与文化视角、不以个人偏好评分、未过滤广告的体验、安全浏览、历史示例语境"
+    },
+    {
+      "section": "14.0",
+      "pages": "142–143",
+      "files": [
+        "SKILL.md"
+      ],
+      "retained_rule": "PQ 不依赖 query；不得将 Needs Met 导航豁免挪用于 PQ"
+    },
+    {
+      "section": "15.0–15.1",
+      "pages": "144",
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "标记依据结果本身，色情及显著色情广告的语境"
+    },
+    {
+      "section": "15.5",
+      "pages": "149–150",
+      "files": [
+        "references/page-types.md",
+        "references/lowest.md"
+      ],
+      "retained_rule": "真正未加载、定制错误页、付费限制、恶意警告的区别；不导入 Needs Met 的 FailsM 映射"
+    },
+    {
+      "section": "15.6",
+      "pages": "151",
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "可选内容标记不自动决定 PQ"
+    },
+    {
+      "section": "15.4.1–15.4.2",
+      "pages": "146–148",
+      "files": [
+        "references/page-types.md"
+      ],
+      "retained_rule": "外语定义、英语和当地常用语言豁免、混合语言、联合 NM 的 PQ N/A；不套独立退出"
+    },
+    {
+      "section": "25–28",
+      "pages": "175–177",
+      "files": [
+        "references/output.md",
+        "references/workflow.md"
+      ],
+      "retained_rule": "转化为任务语境、字段完整性、无法评价原因记录；不复制平台登录、领任务、提交按钮操作"
+    }
+  ],
+  "interpretation": "章节映射验证覆盖索引完整；不等于独立语义认证或评分准确率测试。",
+  "source": {
+    "title": "Search Quality Evaluator Guidelines",
+    "version": "September 11, 2025",
+    "pages": 182,
+    "sha256": "46aa9ea1fd004a09d68ececd7acdb18ec505061f52598fa69a856dfea94a6a06",
+    "user_supplied_file": "SearchQualityEvaluatorGuidelines.pdf",
+    "official_url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf",
+    "version_policy": "Pinned to the user-supplied PDF; no claim about the latest published version."
+  },
+  "skill_version": "1.2.0"
+}

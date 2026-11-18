@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SearchBench · 搜索质量评测</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/timing.js" defer></script>
+  <script src="/ranking.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">S<span>·</span></span>SearchBench</a>
+    <div class="workspace-tag"><span class="dot"></span> 本地工作空间 <span class="tag-end">LOCAL</span></div>
+    <div class="nav-label">工作台</div>
+    <a class="nav-item selected" href="#overview"><span aria-hidden="true">▦</span> 评测工作台 <span class="nav-count">02</span></a>
+    <a class="nav-item" href="#results-section"><span aria-hidden="true">≡</span> URL 评分明细</a>
+    <a class="nav-item" href="#ranking-section"><span aria-hidden="true">↗</span> 排序效果对比</a>
+    <div class="history-heading"><span class="nav-label">运行记录</span><button id="refresh-history" class="icon-button" aria-label="刷新运行记录">↻</button></div>
+    <div id="history" class="history"></div>
+    <div id="history-undo" class="history-undo" role="status" hidden><span>已删除运行记录</span><button id="undo-delete" type="button">撤销</button></div>
+    <div class="sidebar-footer"><span class="small-logo">SQ</span><div>Search Quality Pipeline<small>输入 → 子指标 → 聚合指标</small></div></div>
+  </aside>
+
+  <main>
+    <header class="topbar"><span>搜索评测 <span class="slash">/</span> <strong>第二层 · 子指标评估</strong></span><span class="connection"><span class="dot"></span><span id="connection-text">正在连接本地服务</span></span></header>
+    <div class="page" id="overview">
+      <div class="page-heading"><div><div class="eyebrow" id="workspace-eyebrow">ANSWERABILITY CALIBRATION</div><h1 id="workspace-title">可回答性校准</h1><p id="workspace-description">以人工评分为参考，检查模型对每条搜索结果的判断。</p></div><span class="version-chip" id="workspace-version">可回答性</span></div>
+      <div id="global-error" class="error-box" role="alert" hidden></div>
+      <div class="scope-heading"><div><strong>当前配置 · 待评测范围</strong><p id="scope-dataset">请选择数据集</p></div><button id="refresh-scope" type="button" class="scope-refresh">↻ 重新统计</button></div>
+      <section id="scope-stats" class="stats-grid" aria-label="当前配置的待评测范围" aria-busy="false">
+        <div class="stat"><span>待评测查询</span><strong id="stat-queries">—</strong><small id="stat-query-note">选择数据集后统计</small></div>
+        <div class="stat" title="按所选查询的实际结果逐条统计，保留重复 URL；不会乘以模型数量、方案数量或重复次数。"><span>待评测搜索结果</span><strong id="stat-results">—</strong><small id="stat-result-note">选择数据集后统计</small></div>
+        <div class="stat" title="绑定到当前所选 Query 和原始 API 结果的人工可回答性标签。"><span>人工参考评分</span><strong id="stat-pages">—</strong><small id="stat-page-note">选择数据集后统计</small></div>
+        <div class="stat"><span>已选评测方案</span><strong><span id="stat-schemes">—</span><span id="stat-dimensions" class="stat-suffix"></span></strong><small id="stat-scheme-note">请勾选评测方案</small></div>
+      </section>
+      <p id="scope-status" class="scope-status" role="status">随下方配置更新；历史运行结果见“运行与结果概览”。</p>
+
+      <section class="panel calibration-panel" id="calibration-dataset" hidden>
+        <div class="panel-heading"><div><h2>人工校准集</h2><span id="calibration-size" class="count-chip"></span></div><span class="muted">仅可回答性 · -1 / 0 / 1 / 2 / 3</span></div>
+        <div class="calibration-body">
+          <p id="calibration-dataset-note" class="field-help"></p>
+          <div id="calibration-distribution" class="distribution-values"></div>
+          <details id="calibration-samples"><summary>查看人工样本与评分</summary>
+            <label class="field-label" for="calibration-query">Query</label><select id="calibration-query"><option value="">全部 Query</option></select>
+            <p id="calibration-load-status" class="field-help" role="status"></p>
+            <div class="table-scroll"><table><thead><tr><th>Query / 搜索结果</th><th>人工可回答性</th><th>人工理由</th></tr></thead><tbody id="calibration-rows"></tbody></table></div>
+            <div class="pagination"><span id="calibration-page"></span><div><button id="calibration-prev" type="button" class="secondary-button">上一页</button><button id="calibration-next" type="button" class="secondary-button">下一页</button></div></div>
+          </details>
+        </div>
+      </section>
+
+      <div class="work-grid">
+        <section class="panel config-panel">
+          <div class="panel-heading"><div><span class="step-index">01</span><h2>配置评测</h2></div><span class="muted">创建独立实验</span></div>
+          <form id="run-form">
+            <label class="field-label" for="dataset">输入数据集</label>
+            <select id="dataset" required></select>
+            <div class="dataset-loader">
+              <label class="field-label" for="dataset-input-path">从本机文件或目录加载</label>
+              <input id="dataset-input-path" type="text" placeholder="/Users/…/Downloads/data.sqlite" autocomplete="off" spellcheck="false">
+              <div class="dataset-load-actions"><button id="browse-dataset" type="button" class="secondary-button">选择文件或目录…</button><button id="load-dataset" type="button" class="secondary-button">加载数据集</button></div>
+              <p class="field-help">支持 SQLite、JSON、JSONL、CSV，或已有标准化数据集目录。</p>
+              <details class="dataset-import-options"><summary>导入选项 <span>仅原始文件需要</span></summary>
+                <label class="field-label" for="dataset-import-name">数据集名称 <span>可选，默认使用文件名</span></label>
+                <input id="dataset-import-name" type="text" placeholder="例如：搜索质量测试集" maxlength="200">
+                <label class="field-label" for="dataset-time-policy">评估时间来源</label>
+                <select id="dataset-time-policy"><option value="collection">使用文件中的采集完成时间</option><option value="explicit">指定评估时间</option><option value="unspecified">暂不指定（时效判断可能无法进行）</option></select>
+                <div id="dataset-time-field" hidden><label class="field-label" for="dataset-as-of">评估时间（包含时区）</label><input id="dataset-as-of" type="text" placeholder="2026-10-20T13:36:00+08:00"></div>
+                <label class="field-label" for="dataset-mapping-path">字段映射文件路径 <span>CSV / JSONL 可选</span></label>
+                <input id="dataset-mapping-path" type="text" placeholder="/Users/…/mapping.json" spellcheck="false">
+                <p class="field-help">SQLite 需符合现有 Ateve 采样结构；JSON 使用第一层的标准对象格式。Top10 人工/Jev 参考集 JSONL 自动识别，无采集时间时请选择“暂不指定”。其他 CSV / JSONL 可通过映射文件指定字段。已有数据集目录沿用原配置。</p>
+              </details>
+              <div id="dataset-load-status" class="dataset-load-status" role="status" hidden></div>
+            </div>
+            <div id="dataset-location" class="dataset-location" aria-live="polite">
+              <div id="dataset-source-location"><span class="dataset-location-label">源文件</span><code id="dataset-source-path"></code></div>
+              <span class="dataset-location-label">评测数据目录</span>
+              <code id="dataset-path"></code>
+              <div class="dataset-identity"><span>数据集 ID</span><strong id="dataset-name"></strong></div>
+              <p id="dataset-name-note"></p>
+            </div>
+            <p id="dataset-info" class="field-help"></p>
+            <fieldset><legend class="field-label">评测指标</legend>
+              <label class="scheme-card"><input type="checkbox" name="scheme" value="answerability_only_v1" checked><span><strong>可回答性 · 单维评分</strong><small>模型独立评分，再与人工分数对照</small></span><span class="scheme-count">1</span></label>
+            <label class="scheme-card"><input type="checkbox" name="scheme" value="block_content_needs_met_v1"><span><strong>Block Content Needs Met</strong><small>完整 skill 2.1.1 · FailsM / SM / MM / HM / FullyM</small></span></label>
+            </fieldset>
+            <div class="prompt-config">
+              <div class="field-label">Prompt 版本 <span>修改后保存，用于新评测</span></div>
+              <div id="prompt-version-options"></div>
+              <p id="prompt-config-status" class="field-help" role="status">正在加载 Prompt…</p>
+              <button id="reset-prompt-selection" type="button" class="prompt-template-entry" hidden>重新使用内置版本</button>
+            </div>
+            <div class="prompt-entries">
+              <button id="actual-prompts" type="button" class="prompt-entry"><span>查看实际 Prompt</span><small>历史运行 · 完整模型输入 ↗</small></button>
+              <button id="preview-prompts" type="button" class="prompt-template-entry">预览当前模板（尚未填入样本） ↗</button>
+            </div>
+            <p id="prompt-rubric-note" class="field-help">内置规则为可回答性校准版 v1.1，分档 -1～3。选择自定义 Prompt 后，以所选版本为准。校准配置：千问 qwen3.8-max、temperature=0、JSON 输出模式、关闭独立需求解析、API 内容模式。</p>
+            <fieldset><legend class="field-label">评分模型 <span>单选 · 选择接口后再选择具体型号</span></legend><div id="model-options" class="model-options"></div>
+              <p id="qianwen-key-note" class="field-help" hidden style="overflow-wrap:anywhere"></p>
+              <p id="zhipu-key-note" class="field-help" hidden style="overflow-wrap:anywhere"></p>
+              <div class="model-picker-label scoring-picker-heading"><span>用于 URL 评分的型号</span><button id="refresh-scoring-models" type="button" title="重新调用接口获取评分型号">↻ 刷新</button></div>
+              <div id="scoring-model-options"></div>
+              <p id="jev-key-note" class="field-help" hidden></p>
+              <p id="scoring-model-status" class="field-help" aria-live="polite"></p>
+            </fieldset>
+            <div class="query-module">
+              <label class="query-toggle"><span>解析 query 需求 <small>可选模块</small></span><input id="parse-query" type="checkbox" role="switch" aria-describedby="query-module-note"></label>
+              <p id="query-module-note" class="field-help">先解析需求并冻结需求说明，再交给评分模型。</p>
+            </div>
+            <div class="field-pair"><div><div class="model-picker-label"><label class="field-label" for="query-model">需求解析模型</label><button id="refresh-models" type="button" title="重新调用接口获取模型列表">↻ 刷新</button></div><select id="query-model" disabled><option value="">请先选择评分模型</option></select></div><div><label class="field-label" for="mode">证据模式</label><select id="mode"><option value="api_only">API 返回内容</option><option value="page_content">网页正文快照</option></select></div></div>
+            <p id="query-model-status" class="field-help" aria-live="polite">选择后，将调用对应接口的 /v1/models 获取可用型号。</p>
+            <div class="field-pair"><div><label class="field-label" for="limit">查询数量</label><select id="limit"><option value="1">先试跑 1 条</option><option value="3">前 3 条</option><option value="10">前 10 条</option><option value="50">前 50 条</option><option value="" selected>全部查询</option></select></div><div><label class="field-label" for="repeats">重复次数</label><input id="repeats" type="number" min="1" max="10" value="1" required></div></div>
+            <p class="field-help">按 query ID 排序取前 N 条；重复次数仅作用于评分。</p>
+            <div id="evidence-note" class="info-note"></div>
+            <div id="run-cost-note" class="run-cost-note"></div>
+            <button class="secondary-button" id="plan-button" type="button">执行预检（不调用评分 API）</button><p id="plan-result" class="info-note" role="status" hidden></p>
+            <button class="primary-button" id="start-button" type="submit">开始评测 <span aria-hidden="true">↗</span></button>
+          </form>
+        </section>
+
+        <section class="panel execution-panel">
+          <div class="panel-heading"><div><span class="step-index">02</span><h2>运行与结果概览</h2></div><span id="run-badge" class="badge neutral">等待开始</span></div>
+          <div id="idle-state" class="empty-state">
+            <div class="empty-graphic" aria-hidden="true"><span class="empty-search"></span><span class="empty-line"></span><span class="empty-line short"></span><span class="empty-check">✓</span></div>
+            <h3>让每一个分数都有据可查</h3><p>选择数据集与模型，开始第一轮评测。<br>过程自动保存，可随时查看每条 URL 的评分依据。</p>
+            <div class="flow-preview"><span id="flow-query">解析 query</span><i>→</i><span>并行评分</span><i>→</i><span>查看结果</span></div>
+          </div>
+          <div id="active-state" hidden>
+            <div class="run-title-row"><div><h3 id="run-title"></h3><p id="run-subtitle"></p></div><button id="cancel-button" class="secondary-button danger" hidden>停止评测</button></div>
+            <button id="resume-button" type="button" class="secondary-button" hidden>继续未完成任务</button>
+            <p id="run-prompt-version" class="field-help"></p>
+            <div class="run-timing" aria-label="评测时间统计">
+              <div class="run-elapsed"><span id="run-elapsed-label">总耗时</span><strong id="run-elapsed">—</strong></div>
+              <div class="run-timestamps"><div><span>开始时间</span><time id="run-started">—</time></div><div><span id="run-ended-label">结束时间</span><time id="run-ended">—</time></div></div>
+            </div>
+            <p id="run-timing-note" class="timing-note"></p>
+            <div id="simulation-note" class="warning-note" hidden>模拟运行：仅验证流程，不代表真实搜索质量。模拟值不参与模型一致率。</div>
+            <div class="stages" id="stages"><span data-stage="prepare"><b>1</b> 解析需求</span><span data-stage="evaluate"><b>2</b> 评估 URL</span><span data-stage="finished"><b>3</b> 生成报告</span></div>
+            <div class="progress-label"><span id="progress-text"></span><span id="progress-count"></span></div><div class="progress-track"><div id="progress-fill"></div></div>
+            <p id="run-message" class="field-help" aria-live="polite"></p>
+            <button id="run-prompts" type="button" class="secondary-button">查看实际 Prompt / 响应 ↗</button>
+            <div class="result-counters"><div><strong id="count-rated">0</strong><span>已评分记录</span></div><div id="unknown-counter"><strong id="count-unknown">0</strong><span>无法判断</span></div><div><strong id="count-error">0</strong><span>失败记录</span></div></div>
+            <div id="validation-summary" class="validation-summary" aria-live="polite" hidden></div>
+            <section id="answerability-distribution" class="answerability-distribution" aria-labelledby="answerability-distribution-title" hidden>
+              <h3 id="answerability-distribution-title">可回答性评分分布</h3>
+              <p class="distribution-help">每档占比 = 该档条数 / 有效评分条数；表示分数分布，不代表准确率。</p>
+              <div id="answerability-charts"></div>
+            </section>
+            <section id="calibration-results" class="calibration-results" hidden><div class="section-caption">与人工可回答性评分对照</div><div id="calibration-metrics"></div><p class="field-help">全量同分率 = 完全同分条数 / 全部人工标签条数。失败、模拟和未完成项留在分母，同时展示有效评分同分率和覆盖量。</p><a id="download-calibration">导出人工对照 JSON ↗</a></section>
+            <div id="other-distributions"><div class="section-caption">各子指标分布 <span>数量，不代表准确率</span></div>
+            <div id="distributions"></div></div>
+            <div id="coverage-note" class="coverage-note"></div>
+            <details class="diagnostics"><summary>需求解析与空结果查询</summary><div id="diagnostics"></div></details>
+            <details class="diagnostics" id="comparison-section" hidden><summary>同条件模型一致率与分歧</summary><div id="comparison"></div></details>
+            <div class="downloads"><span>导出报告</span><a id="download-native" hidden>Needs Met 原生结果 JSONL ↗</a><a id="download-judgments">评分 JSONL ↗</a><a id="download-summary" hidden>运行摘要 ↗</a><a id="download-specs" hidden>需求说明 ↗</a><a id="download-comparison" hidden>模型对比 ↗</a></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel ranking-panel" id="ranking-section" hidden>
+        <div class="panel-heading"><div><span class="step-index">03</span><h2>排序效果</h2></div><a id="download-ranking">导出指标 ↗</a></div>
+        <div class="ranking-body">
+          <p id="ranking-run" class="ranking-path"></p>
+          <label class="field-label" for="ranking-group">当前运行的评测分组</label><select id="ranking-group"></select>
+          <div id="ranking-cards" class="ranking-cards"></div>
+          <p id="ranking-coverage" class="field-help"></p>
+          <p class="info-note">单次 NDCG 以本次返回的前 10 条为理想排序范围。比较不同检索配置时，请使用下方的共同候选池对比。</p>
+          <details class="ranking-rules"><summary>指标含义与统计口径</summary><p>NDCG@10 越接近 1，表示高分结果越靠前；MRR@10 是第一个 3 分结果排名倒数的平均值；Success@1/3/10 是前 1/3/10 条中至少出现一个 3 分结果的 query 比例。2 分含冲突，不算完整回答。</p><p>按 query 等权平均。仅使用真实有效评分；前 10 条任一评分失败或缺失，整个 query 排除并显示数量。真实空结果计 0，少于 10 条的列表补空位；重复 URL 只在首次出现时计收益，后续占位保留但计 0。无正收益时 NDCG 计 0。收益映射 -1/0/1/2/3 → 0/0/1/3/7，位置折扣为 1/log₂(rank+1)。模型评分不等同于人工真值。</p></details>
+          <div class="ranking-compare-controls">
+            <h3>与另一条运行对比</h3>
+            <label class="field-label" for="ranking-baseline">基准运行</label><select id="ranking-baseline"><option value="">请选择已结束的运行记录</option></select>
+            <label class="field-label" for="ranking-baseline-group">基准评测分组</label><select id="ranking-baseline-group" disabled><option value="">先选择基准运行</option></select>
+            <p class="field-help">使用共同 query 和两版前 10 条 URL 的并集。相同 URL、相同内容的冲突分数统一沿用基准运行；内容变化的 query 排除。原始评分不变。</p>
+            <button id="compare-ranking" class="secondary-button" type="button" disabled>对比排序效果</button>
+          </div>
+          <p id="ranking-error" class="error-box" role="alert" hidden></p>
+          <div id="ranking-comparison" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="panel results-panel" id="results-section">
+        <div class="panel-heading"><div><span class="step-index">03</span><h2>URL 评分明细</h2><span class="count-chip" id="result-total">0</span></div><span class="muted">点击结果查看理由与证据</span></div>
+        <div class="filters">
+          <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索 query、标题或 URL" aria-label="搜索评测结果"></label>
+          <select id="filter-scheme" aria-label="筛选方案"><option value="">全部方案</option><option value="answerability_only_v1">可回答性 · 人工校准</option><option value="block_content_needs_met_v1">Block Content Needs Met</option><option value="legacy_five_v1">旧体系五维（历史）</option><option value="google_overview_v1">Google NM / PQ（历史）</option></select>
+          <select id="filter-model" aria-label="筛选模型"><option value="">全部模型</option></select>
+          <select id="filter-dimension" aria-label="筛选指标"><option value="">全部指标</option></select>
+          <select id="filter-status" aria-label="筛选评分状态"><option value="">全部状态</option><option value="rated">已评分</option><option value="unjudgeable">证据不足 / 无法判断</option><option value="not_applicable">不适用</option><option value="simulated">仅模拟</option><option value="error">失败</option></select>
+        </div>
+        <div class="table-scroll"><table><thead><tr><th>搜索结果 / Query</th><th>评测方案</th><th>子指标评分</th><th><span class="sr-only">查看详情</span></th></tr></thead><tbody id="results-body"></tbody></table></div>
+        <div id="results-empty" class="table-empty">开始评测后，这里会逐步显示已完成的记录。</div>
+        <div class="pagination"><span id="page-info">每页 20 条结果</span><div><button class="secondary-button" id="prev-page" disabled>← 上一页</button><button class="secondary-button" id="next-page" disabled>下一页 →</button></div></div>
+      </section>
+      <footer class="page-footer"><span>可追溯的输入 · 独立的评分标准 · 可比较的模型实验</span><span>NDCG · MRR · Success 排序指标</span></footer>
+    </div>
+  </main>
+  <dialog id="detail-dialog"><div class="drawer-heading"><div><div class="eyebrow">RESULT INSPECTOR</div><h2>评分依据</h2></div><button id="close-detail" class="icon-button" aria-label="关闭详情">✕</button></div><div id="detail-content"></div></dialog>
+  <dialog id="file-dialog" aria-labelledby="file-dialog-title">
+    <div class="drawer-heading"><div><div class="eyebrow">LOCAL DATASET</div><h2 id="file-dialog-title">选择本机文件或数据集目录</h2></div><button id="close-files" class="icon-button" aria-label="关闭文件选择">✕</button></div>
+    <div class="file-browser-body">
+      <p class="field-help">选择原始数据文件后点击“加载数据集”；含 manifest.json 的标准化目录可以直接使用。</p>
+      <label class="field-label" for="file-directory">目录路径</label>
+      <div class="file-path-row"><input id="file-directory" type="text" spellcheck="false"><button id="file-go" type="button" class="secondary-button">前往</button></div>
+      <div class="file-browser-tools"><button id="file-parent" type="button" class="secondary-button">↑ 上一级</button><input id="file-filter" type="search" placeholder="按名称查找" aria-label="按文件名过滤"></div>
+      <div id="file-error" class="error-box" role="alert" hidden></div>
+      <div id="file-list" class="file-list" aria-live="polite"></div>
+      <div class="file-browser-footer"><span id="file-page-info"></span><div><button id="file-prev" type="button" class="secondary-button">上一页</button><button id="file-next" type="button" class="secondary-button">下一页</button></div></div>
+      <button id="choose-directory" type="button" class="secondary-button" disabled>使用此数据集目录</button>
+    </div>
+  </dialog>
+  <dialog id="prompt-dialog" aria-labelledby="prompt-title">
+    <div class="drawer-heading"><div><div class="eyebrow">MODEL INSPECTOR</div><h2 id="prompt-title">评测 Prompt 与响应</h2></div><button id="close-prompt" class="icon-button" aria-label="关闭 Prompt 与响应">✕</button></div>
+    <div class="prompt-body">
+      <p id="prompt-note" class="info-note"></p>
+      <label class="field-label" for="prompt-task">选择评测任务</label>
+      <select id="prompt-task"></select>
+      <p id="prompt-meta" class="field-help"></p>
+      <div id="prompt-error" class="error-box" role="alert" hidden></div>
+      <div id="prompt-view" hidden>
+        <div class="prompt-tabs" role="group" aria-label="Prompt 内容">
+          <button type="button" data-prompt-tab="messages" aria-pressed="true">完整 Prompt</button>
+          <button type="button" data-prompt-tab="system" aria-pressed="false">System 原文</button>
+          <button type="button" data-prompt-tab="payload" aria-pressed="false">User 原文</button>
+          <button type="button" data-prompt-tab="schema" aria-pressed="false">输出格式 · Schema</button>
+          <button id="request-tab" type="button" data-prompt-tab="request" aria-pressed="false" hidden>API 请求体</button>
+          <button id="response-tab" type="button" data-prompt-tab="response" aria-pressed="false" hidden>模型响应 · Response</button>
+        </div>
+        <p id="prompt-part-note" class="field-help"></p>
+        <div id="prompt-messages" class="prompt-messages" hidden>
+          <section class="prompt-message-card" aria-labelledby="system-message-label">
+            <div class="prompt-message-heading"><strong id="system-message-label">01 · SYSTEM</strong><span>完整规则 + Schema</span><button type="button" data-copy-message="system">复制原文</button></div>
+            <pre id="prompt-system-message" tabindex="0"></pre>
+          </section>
+          <section class="prompt-message-card" aria-labelledby="user-message-label">
+            <div class="prompt-message-heading"><strong id="user-message-label">02 · USER</strong><span>本条任务的具体输入</span><button type="button" data-copy-message="user">复制原文</button></div>
+            <pre id="prompt-user-message" tabindex="0"></pre>
+          </section>
+        </div>
+        <div id="request-meta" class="request-meta" hidden></div>
+        <div id="response-view" hidden>
+          <p id="response-message" class="info-note"></p>
+          <label class="field-label" for="response-attempt">接口请求记录</label>
+          <select id="response-attempt"></select>
+          <div id="response-refusal-block" hidden><strong>拒绝信息</strong><pre id="response-refusal"></pre></div>
+          <p id="response-text-label" class="field-label">模型可见回答原文</p>
+        </div>
+        <pre id="prompt-text" tabindex="0"></pre>
+        <div id="response-summary" class="response-summary" hidden></div>
+        <details id="response-details-block" class="source-block" hidden><summary>响应详情 · JSON</summary><pre id="response-details"></pre></details>
+        <div class="prompt-actions"><button id="edit-inspected-prompt" type="button" class="secondary-button" hidden>以此为基础编辑</button><button id="copy-prompt-part" type="button" class="secondary-button">复制当前内容</button><button id="copy-prompt-all" type="button" class="secondary-button">复制完整 Prompt</button><button id="copy-response" type="button" class="secondary-button" hidden>复制响应详情</button><span id="prompt-copy-status" role="status"></span></div>
+        <details class="source-block"><summary>版本与追溯信息</summary><pre id="prompt-provenance"></pre></details>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="prompt-editor-dialog" aria-labelledby="prompt-editor-title">
+    <div class="drawer-heading"><div><div class="eyebrow">PROMPT EDITOR</div><h2 id="prompt-editor-title">编辑 Prompt</h2></div><button id="close-prompt-editor" type="button" class="icon-button" aria-label="关闭 Prompt 编辑器">✕</button></div>
+    <div class="prompt-editor-body">
+      <p id="prompt-editor-context" class="info-note"></p>
+      <p id="prompt-editor-help" class="field-help">编辑评分规则，保存为独立版本。保存版本不会调用模型。</p>
+      <label class="field-label" for="prompt-version-name">新版本名称</label>
+      <input id="prompt-version-name" type="text" maxlength="80" placeholder="例如：可回答性 v2 · 调整部分回答边界">
+      <div class="prompt-editor-label"><label id="prompt-rules-label" class="field-label" for="prompt-rules-editor">System 指令（可编辑）</label><span id="prompt-editor-count"></span></div>
+      <textarea id="prompt-rules-editor" maxlength="50000" spellcheck="false"></textarea>
+      <div id="prompt-editor-error" class="error-box" role="alert" hidden></div>
+      <div class="prompt-editor-actions">
+        <button id="save-prompt-version" type="button" class="primary-button">保存新版本并应用</button>
+        <button id="restore-builtin-prompt" type="button" class="secondary-button">载入内置规则</button>
+        <button id="discard-prompt-draft" type="button" class="secondary-button">放弃草稿</button>
+      </div>
+      <p id="prompt-editor-status" class="field-help" role="status"></p>
+      <details id="prompt-editor-schema-block" class="source-block"><summary>系统自动附加的输出 Schema（只读）</summary><pre id="prompt-editor-schema"></pre></details>
+    </div>
+  </dialog>
+</body>
+</html>

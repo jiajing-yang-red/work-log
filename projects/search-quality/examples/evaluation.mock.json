@@ -1,0 +1,49 @@
+{
+  "models": {
+    "mock_a": {
+      "protocol": "mock",
+      "model": "simulated-a"
+    },
+    "mock_b": {
+      "protocol": "mock",
+      "model": "simulated-b"
+    }
+  },
+  "query_model": "mock_a",
+  "experiments": [
+    {
+      "id": "legacy-a",
+      "scheme": "legacy_five_v1",
+      "model": "mock_a",
+      "mode": "api_only"
+    },
+    {
+      "id": "legacy-b",
+      "scheme": "legacy_five_v1",
+      "model": "mock_b",
+      "mode": "api_only"
+    },
+    {
+      "id": "google-a",
+      "scheme": "google_overview_v1",
+      "model": "mock_a",
+      "mode": "api_only"
+    },
+    {
+      "id": "google-b",
+      "scheme": "google_overview_v1",
+      "model": "mock_b",
+      "mode": "api_only"
+    }
+  ],
+  "runtime": {
+    "max_workers": 4,
+    "max_input_chars": 180000
+  },
+  "approved_authority_domains": [],
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

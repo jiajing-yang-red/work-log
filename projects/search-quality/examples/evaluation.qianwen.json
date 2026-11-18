@@ -1,0 +1,54 @@
+{
+  "models": {
+    "qianwen": {
+      "protocol": "openai_chat",
+      "model": "qwen3.8-max",
+      "base_url": "https://maas.qianwenaiapi.com/compatible-mode/v1",
+      "api_key_env": "QIANWEN_API_KEY",
+      "token_limit_field": "max_tokens",
+      "max_output_tokens": 16384,
+      "output_mode": "json_object",
+      "stream": true,
+      "timeout_seconds": 120,
+      "stream_timeout_seconds": 600,
+      "max_concurrency": 4,
+      "requests_per_second": 1,
+      "catalog_models": [
+        "qwen3.8-flash",
+        "qwen3.8-max",
+        "qwen3.7-max",
+        "qwen3.7-plus",
+        "qwen3.6-flash",
+        "qwen3.6-plus"
+      ],
+      "parameters": {
+        "temperature": 0
+      }
+    }
+  },
+  "query_model": "qianwen",
+  "experiments": [
+    {
+      "id": "legacy-qianwen",
+      "scheme": "legacy_five_v1",
+      "model": "qianwen",
+      "mode": "api_only"
+    },
+    {
+      "id": "google-qianwen",
+      "scheme": "google_overview_v1",
+      "model": "qianwen",
+      "mode": "api_only"
+    }
+  ],
+  "runtime": {
+    "max_workers": 4,
+    "max_input_chars": 180000
+  },
+  "approved_authority_domains": [],
+  "failure_recovery": {
+    "enabled": true,
+    "max_attempts": 3,
+    "max_output_tokens": 32768
+  }
+}

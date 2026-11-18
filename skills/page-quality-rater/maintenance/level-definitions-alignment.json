@@ -1,0 +1,724 @@
+{
+  "before_version": "1.0.1",
+  "after_version": "1.0.2",
+  "baseline": "Google Search Quality Evaluator Guidelines, September 11, 2025",
+  "source_sha256": "46aa9ea1fd004a09d68ececd7acdb18ec505061f52598fa69a856dfea94a6a06",
+  "sections": [
+    "4.0",
+    "5.0",
+    "6.0",
+    "6.1",
+    "7.0",
+    "8.0"
+  ],
+  "source_pages": [
+    29,
+    30,
+    59,
+    68,
+    69,
+    71,
+    77
+  ],
+  "scope": "五档开头完整定义段、两组评级表、Low 表后重要说明、Medium 两类型及上下边界；并非逐字重印全部细则和案例。",
+  "levels": [
+    {
+      "level": "Lowest",
+      "zh_name": "最低质量",
+      "section": "4.0",
+      "definition": {
+        "page": 29,
+        "en": [
+          "Lowest quality pages are untrustworthy, deceptive, harmful to people or society, or have other highly undesirable characteristics. The considerations for Lowest quality include quality of the MC, reputation, E-E-A-T, etc., but there are special checks you will need to complete first."
+        ],
+        "zh": [
+          "最低质量页面不可信、具有欺骗性、对个人或社会有害，或具有其他极其不良的特征。最低质量的考量包括主内容质量、声誉、E-E-A-T 等，但首先需要完成一些特殊检查。"
+        ]
+      },
+      "initial": [
+        {
+          "label": "页面的目的",
+          "page": 29,
+          "en": [
+            "The Lowest rating is required if the page has a harmful purpose, or if it is designed to deceive people about its true purpose or who is responsible for the content on the page.",
+            "The Lowest rating is required if the page is created to benefit the owner of the website (e.g. to make money) with very little or no attempt to benefit website visitors or otherwise serve a beneficial purpose."
+          ],
+          "zh": [
+            "如果页面具有有害目的，或者被设计用于欺骗人们对其真实目的或页面内容责任主体的认识，则必须评为 Lowest。",
+            "如果页面是为网站所有者获益（例如赚钱）而创建的，却几乎或完全不尝试使网站访问者受益，也不服务于其他有益目的，则必须评为 Lowest。"
+          ]
+        },
+        {
+          "label": "本规范所述的页面造成伤害的可能性",
+          "page": 29,
+          "en": [
+            "The Lowest rating is required if the MC is harmful to self or others, harmful to specified groups, or contains harmfully misleading information."
+          ],
+          "zh": [
+            "如果主内容对自己或他人有害、对指定群体有害，或包含有害误导信息，则必须评为 Lowest。"
+          ]
+        },
+        {
+          "label": "页面主题、网站类型及 YMYL 标准的适用程度",
+          "page": 29,
+          "en": [
+            "A page on any topic or any type of website may qualify for Lowest. Give special scrutiny to pages or websites needing a high level of trust, such as online stores, medical websites, or news coverage of major civic issues."
+          ],
+          "zh": [
+            "任何主题或任何类型网站上的页面都可能符合 Lowest。应特别仔细审查需要高度信任的页面或网站，例如在线商店、医疗网站或重大公共事务的新闻报道。"
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "label": "主内容质量",
+          "page": 30,
+          "en": [
+            "The page is hacked, defaced, or spammed.",
+            "The page is gibberish or otherwise makes no sense.",
+            "The MC is created with little to no effort, has little to no originality and the MC adds no value compared to similar pages on the web.",
+            "The MC is created with so little effort, originality, talent, or skill that the page fails to achieve its purpose."
+          ],
+          "zh": [
+            "页面被入侵、篡改或受到垃圾内容污染。",
+            "页面内容不知所云，或以其他方式毫无意义。",
+            "主内容的创作投入很少或完全没有，原创性很少或完全没有，并且与网络上的类似页面相比没有增值。",
+            "主内容的投入、原创性、才华或技能如此之少，以致页面无法实现其目的。"
+          ]
+        },
+        {
+          "label": "页面标题",
+          "page": 30,
+          "en": [
+            "The page title is extremely misleading, shocking, or exaggerated."
+          ],
+          "zh": [
+            "页面标题极度误导、耸人听闻或夸大。"
+          ]
+        },
+        {
+          "label": "广告与补充内容在页面上的作用",
+          "page": 30,
+          "en": [
+            "The MC is deliberately obstructed or obscured due to Ads, SC, interstitial pages, download links or other content that is beneficial to the website owner but not necessarily the website visitor."
+          ],
+          "zh": [
+            "主内容被广告、补充内容、插页、下载链接或其他内容故意阻挡或遮蔽；这些内容有利于网站所有者，但不一定有利于网站访问者。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者提供的信息",
+          "page": 30,
+          "en": [
+            "A complete lack of information about who is responsible for the website and its content for YMYL pages or other pages requiring trust."
+          ],
+          "zh": [
+            "对于 YMYL 页面或其他需要信任的页面，完全缺乏关于谁对网站及其内容负责的信息。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者的声誉",
+          "page": 30,
+          "en": [
+            "A very negative reputation, including a reputation for malicious or harmful behavior."
+          ],
+          "zh": [
+            "非常负面的声誉，包括因恶意或有害行为而形成的声誉。"
+          ]
+        },
+        {
+          "label": "页面的可信度：E-E-A-T",
+          "page": 30,
+          "en": [
+            "The page or website is highly untrustworthy.",
+            "The lack of experience, expertise, authoritativeness or trust causes the page to fail to achieve its purpose."
+          ],
+          "zh": [
+            "页面或网站高度不可信。",
+            "经验、专业知识、权威性或信任的缺乏，导致页面无法实现其目的。"
+          ]
+        }
+      ],
+      "criterion_heading": {
+        "page": 30,
+        "en": [
+          "Any one of the following is justification for Lowest"
+        ],
+        "zh": [
+          "以下任意一项都足以作为评为 Lowest 的依据。"
+        ]
+      }
+    },
+    {
+      "level": "Low",
+      "zh_name": "低质量",
+      "section": "5.0",
+      "definition": {
+        "page": 59,
+        "en": [
+          "Low quality pages do not achieve their purpose well because they are lacking in an important dimension or have a problematic aspect. Low quality pages do not meet the standards for Lowest but may have similar though milder undesirable characteristics."
+        ],
+        "zh": [
+          "低质量页面因为在某个重要维度上有所欠缺，或在某个方面存在问题，而不能很好地实现其目的。低质量页面尚未达到 Lowest 的标准，但可能具有类似、程度较轻的不良特征。"
+        ]
+      },
+      "initial": [
+        {
+          "label": "页面的目的",
+          "page": 59,
+          "en": [
+            "Low quality pages have a beneficial or non-harmful purpose."
+          ],
+          "zh": [
+            "低质量页面具有有益或无害的目的。"
+          ]
+        },
+        {
+          "label": "本规范所述的页面造成伤害的可能性",
+          "page": 59,
+          "en": [
+            "Low quality pages have either no potential to cause harm, or have some mild potential for harm but do not meet the standards for Lowest as described in Section 4.0."
+          ],
+          "zh": [
+            "低质量页面没有造成伤害的可能性，或者具有轻微的伤害可能性，但尚未达到 Lowest 的标准。"
+          ]
+        },
+        {
+          "label": "页面主题、网站类型及 YMYL 标准的适用程度",
+          "page": 59,
+          "en": [
+            "A page on any topic or any type of website may qualify for Low. Give special scrutiny to pages or websites needing a high level of trust, such as online stores, medical websites, or news coverage of major civic issues."
+          ],
+          "zh": [
+            "任何主题或任何类型网站上的页面都可能符合 Low。应特别仔细审查需要高度信任的页面或网站，例如在线商店、医疗网站或重大公共事务的新闻报道。"
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "label": "主内容质量",
+          "page": 59,
+          "en": [
+            "MC is created without adequate effort, originality, talent, or skill necessary to achieve the purpose of the page in a satisfying way."
+          ],
+          "zh": [
+            "主内容缺少以令人满意的方式实现页面目的所必需的足够投入、原创性、才华或技能。"
+          ]
+        },
+        {
+          "label": "页面标题",
+          "page": 59,
+          "en": [
+            "The page title is slightly misleading, shocking, or exaggerated."
+          ],
+          "zh": [
+            "页面标题轻度误导、耸人听闻或夸大。"
+          ]
+        },
+        {
+          "label": "广告与补充内容在页面上的作用",
+          "page": 59,
+          "en": [
+            "The Ads or SC significantly distract from or interrupt the use of the MC as described in Section 5.3."
+          ],
+          "zh": [
+            "广告或补充内容显著分散注意力，或打断主内容的使用，具体见干扰性广告／补充内容细则。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者提供的信息",
+          "page": 59,
+          "en": [
+            "Unsatisfying amount of website information or information about the content creator for the purpose of the page.",
+            "Important: For personal content shared on social media platforms or forums, an alias or username is adequate."
+          ],
+          "zh": [
+            "就页面目的而言，关于网站或内容创作者的信息量不足以令人满意。",
+            "重要：对于在社交媒体平台或论坛上分享的个人内容，别名或用户名就已足够。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者的声誉",
+          "page": 59,
+          "en": [
+            "A mildly negative reputation of the website or content creator."
+          ],
+          "zh": [
+            "网站或内容创作者具有轻度负面声誉。"
+          ]
+        },
+        {
+          "label": "页面的可信度：E-E-A-T",
+          "page": 59,
+          "en": [
+            "Inadequate level of E-E-A-T for the purpose of the page."
+          ],
+          "zh": [
+            "E-E-A-T 的水平不足以满足页面目的。"
+          ]
+        }
+      ],
+      "criterion_heading": {
+        "page": 59,
+        "en": [
+          "Any one of the following is justification for Low"
+        ],
+        "zh": [
+          "以下任意一项都足以作为评为 Low 的依据。"
+        ]
+      },
+      "table_note": {
+        "page": 59,
+        "en": [
+          "Important: Low quality pages can occur on any type of website, including academic websites, nonprofit websites, government websites, or any other generally helpful type of website. Low quality pages may be about any topic. Pages on YMYL topics need more scrutiny for signs of Low quality related to the MC and website/content creator because the page could impact a person’s health, financial stability, or safety, or the welfare or well-being of society. However, for any type of page, a single Low quality attribute is enough to use the Low quality rating."
+        ],
+        "zh": [
+          "重要：任何类型的网站都可能出现低质量页面，包括学术网站、非营利网站、政府网站或其他通常有帮助的网站。低质量页面可以涉及任何主题。对于 YMYL 主题的页面，需要更加仔细地检查与主内容及网站／内容创作者有关的低质量迹象，因为页面可能影响个人的健康、财务稳定或安全，或社会的福利与福祉。不过，对于任何类型的页面，一个低质量特征就足以使用 Low 评分。"
+        ]
+      }
+    },
+    {
+      "level": "Medium",
+      "zh_name": "中等质量",
+      "section": "6.0",
+      "definition": {
+        "page": 68,
+        "en": [
+          "Medium pages have a beneficial purpose and achieve their purpose. There is nothing wrong with Medium quality pages. Expect to encounter many Medium quality pages in PQ rating tasks."
+        ],
+        "zh": [
+          "中等质量页面具有有益的目的，并实现了其目的。中等质量页面并没有什么问题。在 PQ 评分任务中，应预期会遇到许多中等质量页面。"
+        ]
+      },
+      "initial": [
+        {
+          "label": "页面的目的",
+          "page": 68,
+          "en": [
+            "Medium quality pages have a beneficial or non-harmful purpose."
+          ],
+          "zh": [
+            "中等质量页面具有有益或无害的目的。"
+          ]
+        },
+        {
+          "label": "本规范所述的页面造成伤害的可能性",
+          "page": 68,
+          "en": [
+            "Medium quality pages are not expected to cause harm."
+          ],
+          "zh": [
+            "中等质量页面预期不会造成伤害。"
+          ]
+        },
+        {
+          "label": "页面主题、网站类型及 YMYL 标准的适用程度",
+          "page": 68,
+          "en": [
+            "A page on any topic or any type of website may qualify for Medium. Give special scrutiny to pages on YMYL topics or websites needing a high level of trust, such as online stores."
+          ],
+          "zh": [
+            "任何主题或任何类型网站上的页面都可能符合 Medium。应特别仔细审查 YMYL 主题的页面，或在线商店等需要高度信任的网站。"
+          ]
+        },
+        {
+          "label": "页面标题",
+          "page": 68,
+          "en": [
+            "Medium quality pages have titles that summarize the page."
+          ],
+          "zh": [
+            "中等质量页面的标题概括了页面内容。"
+          ]
+        },
+        {
+          "label": "广告与补充内容在页面上的作用",
+          "page": 68,
+          "en": [
+            "The Ads and SC do not block or significantly interfere with the MC on Medium quality pages.",
+            "Remember: Many websites need monetization to share content with users. The presence or absence of Ads alone is not a consideration for PQ rating."
+          ],
+          "zh": [
+            "中等质量页面上的广告和补充内容不阻挡或显著干扰主内容。",
+            "请记住：许多网站需要通过变现来向用户分享内容。广告的存在或缺失本身不是 PQ 评分的考量因素。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者提供的信息",
+          "page": 68,
+          "en": [
+            "Medium quality pages have adequate information about the website and content creator for the purpose of the page. For stores or websites that process financial transactions, examine the customer service information.",
+            "Important: For personal content shared on social media platforms or forums, an alias or username is adequate."
+          ],
+          "zh": [
+            "中等质量页面提供了对页面目的而言足够的网站和内容创作者信息。对于商店或处理金融交易的网站，应检查客户服务信息。",
+            "重要：对于在社交媒体平台或论坛上分享的个人内容，别名或用户名就已足够。"
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "label": "主内容质量",
+          "page": 68,
+          "en": [
+            "MC created with adequate effort, originality, talent, or skill such that the page achieves its purpose."
+          ],
+          "zh": [
+            "主内容具有足够的投入、原创性、才华或技能，使页面实现其目的。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者的声誉",
+          "page": 68,
+          "en": [
+            "Not especially positive nor especially negative: Reputation information found about the website or content creator is not concerning, but not positive enough to justify a higher rating."
+          ],
+          "zh": [
+            "既不特别正面，也不特别负面：找到的网站或内容创作者声誉信息不令人担忧，但也没有正面到足以支持更高评分。"
+          ]
+        },
+        {
+          "label": "页面的可信度：E-E-A-T",
+          "page": 68,
+          "en": [
+            "Adequate level of E-E-A-T for the purpose of the page."
+          ],
+          "zh": [
+            "E-E-A-T 的水平足以满足页面目的。"
+          ]
+        }
+      ],
+      "criterion_heading": {
+        "page": 68,
+        "en": [
+          "Medium Quality Criteria"
+        ],
+        "zh": [
+          "中等质量标准。"
+        ]
+      },
+      "medium_types": [
+        {
+          "label": "没有问题，但也没有特别之处",
+          "page": 69,
+          "en": [
+            "All of the Medium Page Quality considerations and criteria apply."
+          ],
+          "zh": [
+            "所有 Medium 页面质量的考量与标准均适用。"
+          ]
+        },
+        {
+          "label": "质量混合，但有一些可取之处",
+          "page": 69,
+          "en": [
+            "The page or website has some signs of High quality (E-E-A-T, quality of the MC, positive reputation), but also has one sign or mild signs of Low quality."
+          ],
+          "zh": [
+            "页面或网站有一些 High 质量的迹象（E-E-A-T、主内容质量、正面声誉），但也有一个 Low 质量的迹象，或一些轻度的 Low 质量迹象。"
+          ]
+        }
+      ],
+      "table_note": {
+        "page": 69,
+        "en": [
+          "Important: For a page to receive a rating higher than Medium, it must meet the criteria described in the next sections on High and Highest page quality. For a page to receive a rating lower than Medium, it must meet the criteria for Low or Lowest page quality. Medium is a rating that applies to many pages you will encounter in PQ rating tasks: many pages have nothing wrong, yet do not represent the high or highest quality content that's available online."
+        ],
+        "zh": [
+          "重要：页面要获得高于 Medium 的评分，必须满足 High 和 Highest 页面质量部分所述的标准。页面要获得低于 Medium 的评分，必须满足 Low 或 Lowest 页面质量标准。Medium 适用于 PQ 评分任务中遇到的许多页面：许多页面没有问题，却并不代表网上可获得的高质量或最高质量内容。"
+        ]
+      }
+    },
+    {
+      "level": "High",
+      "zh_name": "高质量",
+      "section": "7.0",
+      "definition": {
+        "page": 71,
+        "en": [
+          "High quality pages serve a beneficial purpose and achieve that purpose well. High quality pages exist for almost any beneficial purpose you can imagine, from providing information to selling products to making people laugh to artistic expression."
+        ],
+        "zh": [
+          "高质量页面服务于有益的目的，并很好地实现了该目的。几乎任何你能想到的有益目的，都存在高质量页面，从提供信息、销售产品、使人发笑，到艺术表达。"
+        ]
+      },
+      "initial": [
+        {
+          "label": "页面的目的",
+          "page": 71,
+          "en": [
+            "High quality pages have a beneficial purpose."
+          ],
+          "zh": [
+            "高质量页面具有有益的目的。"
+          ]
+        },
+        {
+          "label": "本规范所述的页面造成伤害的可能性",
+          "page": 71,
+          "en": [
+            "High quality pages are not expected to cause harm."
+          ],
+          "zh": [
+            "高质量页面预期不会造成伤害。"
+          ]
+        },
+        {
+          "label": "页面主题、网站类型及 YMYL 标准的适用程度",
+          "page": 71,
+          "en": [
+            "A page on any topic or any type of website may qualify for High. Give special scrutiny to pages on YMYL topics or websites needing a high level of trust, such as online stores."
+          ],
+          "zh": [
+            "任何主题或任何类型网站上的页面都可能符合 High。应特别仔细审查 YMYL 主题的页面，或在线商店等需要高度信任的网站。"
+          ]
+        },
+        {
+          "label": "页面标题",
+          "page": 71,
+          "en": [
+            "High quality pages have titles that summarize the page."
+          ],
+          "zh": [
+            "高质量页面的标题概括了页面内容。"
+          ]
+        },
+        {
+          "label": "广告与补充内容在页面上的作用",
+          "page": 71,
+          "en": [
+            "The Ads and SC do not block or significantly interfere with the MC on High quality pages.",
+            "Remember: Many websites need monetization to share content with users. The presence or absence of Ads alone is not a consideration for PQ rating."
+          ],
+          "zh": [
+            "高质量页面上的广告和补充内容不阻挡或显著干扰主内容。",
+            "请记住：许多网站需要通过变现来向用户分享内容。广告的存在或缺失本身不是 PQ 评分的考量因素。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者提供的信息",
+          "page": 71,
+          "en": [
+            "High quality pages have adequate information about the website and content creator for the purpose of the page. For stores or websites that process financial transactions, examine the customer service information.",
+            "Important: For personal content shared on social media platforms or forums, an alias or username is adequate."
+          ],
+          "zh": [
+            "高质量页面提供了对页面目的而言足够的网站和内容创作者信息。对于商店或处理金融交易的网站，应检查客户服务信息。",
+            "重要：对于在社交媒体平台或论坛上分享的个人内容，别名或用户名就已足够。"
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "label": "主内容质量",
+          "page": 71,
+          "en": [
+            "MC created with a high level of effort, originality, talent, or skill such that the page achieves its purpose well."
+          ],
+          "zh": [
+            "主内容具有高水平的投入、原创性、才华或技能，使页面很好地实现其目的。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者的声誉",
+          "page": 71,
+          "en": [
+            "Positive reputation of the website for the topic of the page.",
+            "Positive reputation of the content creator for the topic of the MC."
+          ],
+          "zh": [
+            "网站在页面主题方面具有正面声誉。",
+            "内容创作者在主内容主题方面具有正面声誉。"
+          ]
+        },
+        {
+          "label": "页面的可信度：E-E-A-T",
+          "page": 71,
+          "en": [
+            "High level of E-E-A-T for the purpose of the page."
+          ],
+          "zh": [
+            "对于页面目的而言，具有高水平的 E-E-A-T。"
+          ]
+        }
+      ],
+      "criterion_heading": {
+        "page": 71,
+        "en": [
+          "High Quality Pages must demonstrate at least one of the following"
+        ],
+        "zh": [
+          "High 质量页面必须表现出以下至少一项。"
+        ]
+      }
+    },
+    {
+      "level": "Highest",
+      "zh_name": "最高质量",
+      "section": "8.0",
+      "definition": {
+        "page": 77,
+        "en": [
+          "Highest quality pages serve a beneficial purpose and achieve that purpose very well. The distinction between High and Highest is based on the quality of MC, the reputation of the website and content creator, and/or E-E-A-T."
+        ],
+        "zh": [
+          "最高质量页面服务于有益的目的，并非常好地实现了该目的。High 与 Highest 的区别，取决于主内容质量、网站和内容创作者的声誉，以及／或者 E-E-A-T。"
+        ]
+      },
+      "initial": [
+        {
+          "label": "页面的目的",
+          "page": 77,
+          "en": [
+            "Highest quality pages have a beneficial purpose."
+          ],
+          "zh": [
+            "最高质量页面具有有益的目的。"
+          ]
+        },
+        {
+          "label": "本规范所述的页面造成伤害的可能性",
+          "page": 77,
+          "en": [
+            "Highest quality pages are not expected to cause harm."
+          ],
+          "zh": [
+            "最高质量页面预期不会造成伤害。"
+          ]
+        },
+        {
+          "label": "页面主题、网站类型及 YMYL 标准的适用程度",
+          "page": 77,
+          "en": [
+            "A page on any topic or any type of website may qualify for Highest. Give special scrutiny to pages on YMYL topics or websites needing a high level of trust, such as online stores."
+          ],
+          "zh": [
+            "任何主题或任何类型网站上的页面都可能符合 Highest。应特别仔细审查 YMYL 主题的页面，或在线商店等需要高度信任的网站。"
+          ]
+        },
+        {
+          "label": "页面标题",
+          "page": 77,
+          "en": [
+            "Highest quality pages have titles that summarize the page."
+          ],
+          "zh": [
+            "最高质量页面的标题概括了页面内容。"
+          ]
+        },
+        {
+          "label": "广告与补充内容在页面上的作用",
+          "page": 77,
+          "en": [
+            "The Ads and SC do not block or significantly interfere with the MC on Highest quality pages.",
+            "Remember: Many websites need monetization to share content with users. The presence or absence of Ads alone is not a consideration for PQ rating."
+          ],
+          "zh": [
+            "最高质量页面上的广告和补充内容不阻挡或显著干扰主内容。",
+            "请记住：许多网站需要通过变现来向用户分享内容。广告的存在或缺失本身不是 PQ 评分的考量因素。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者提供的信息",
+          "page": 77,
+          "en": [
+            "Highest quality pages have adequate information about the website and content creator for the purpose of the page. For stores or websites that process financial transactions, examine the customer service information.",
+            "Important: For personal content shared on social media platforms or forums, an alias or username is adequate."
+          ],
+          "zh": [
+            "最高质量页面提供了对页面目的而言足够的网站和内容创作者信息。对于商店或处理金融交易的网站，应检查客户服务信息。",
+            "重要：对于在社交媒体平台或论坛上分享的个人内容，别名或用户名就已足够。"
+          ]
+        }
+      ],
+      "criteria": [
+        {
+          "label": "主内容质量",
+          "page": 77,
+          "en": [
+            "MC created with a very high level of effort, originality, talent, or skill such that the page achieves its purpose very well."
+          ],
+          "zh": [
+            "主内容具有非常高水平的投入、原创性、才华或技能，使页面非常好地实现其目的。"
+          ]
+        },
+        {
+          "label": "网站和内容创作者的声誉",
+          "page": 77,
+          "en": [
+            "Very positive reputation of the website for the topic of the page.",
+            "Very positive reputation of the content creator for the topic of the MC."
+          ],
+          "zh": [
+            "网站在页面主题方面具有非常正面声誉。",
+            "内容创作者在主内容主题方面具有非常正面声誉。"
+          ]
+        },
+        {
+          "label": "页面的可信度：E-E-A-T",
+          "page": 77,
+          "en": [
+            "Very high level of E-E-A-T for the purpose of the page."
+          ],
+          "zh": [
+            "对于页面目的而言，具有非常高水平的 E-E-A-T。"
+          ]
+        }
+      ],
+      "criterion_heading": {
+        "page": 77,
+        "en": [
+          "Highest Quality Pages must demonstrate at least one of the following"
+        ],
+        "zh": [
+          "Highest 质量页面必须表现出以下至少一项。"
+        ]
+      }
+    }
+  ],
+  "findings": [
+    [
+      "Lowest",
+      "旧定义加入“没有有益目的／无法实现看似有益目的”的解释，省略原定义后半句关于考量和特殊检查的说明。",
+      "恢复完整两句英文定义及对应翻译；特殊目的及伤害条件在初始考虑表中逐项保留。"
+    ],
+    [
+      "Low",
+      "旧定义合并了目的、伤害条件，未直接保留“类似但程度较轻的不良特征”的总定义。",
+      "恢复完整两句定义；有益或无害目的、轻微伤害风险单列为初始考虑。"
+    ],
+    [
+      "Medium",
+      "旧定义融合了初始表的“或无害”，并加入“不是无法判断／证据不足代替档”的执行解释。",
+      "恢复完整三句定义；初始表继续保留“有益或无害”，弃权说明移至补充细则。"
+    ],
+    [
+      "High",
+      "旧定义增加“对访问者令人满意”，并省略原文列举的各种有益目的。",
+      "恢复原文完整两句；满意程度的具体要求仍在 MC 细则中保留。"
+    ],
+    [
+      "Highest",
+      "旧定义增加“对访问者非常令人满意”，并把区别改述为各因素达到很高程度。",
+      "恢复“区别取决于 MC、网站和创作者声誉、以及／或者 E-E-A-T”；非常高水平的门槛在条件表中明确。"
+    ],
+    [
+      "条件表",
+      "旧表将定义表与其他小节释义合并；Lowest 的“不一定有利于访问者”易被读成必须有害，其他“需要信任”页面被收窄为“高度依赖信任”。",
+      "按原始表格维度逐项翻译；恢复“不一定有利”、其他“需要信任”、MC 各条件的并列／合取逻辑；High/Highest 的“至少一项”单独明确。"
+    ]
+  ],
+  "verification": {
+    "english_segments": 73,
+    "all_english_segments_found_verbatim_ignoring_whitespace": true,
+    "definition_paragraphs_preserved_in_runtime": 5,
+    "chinese_is_translation_not_english_original": true
+  },
+  "translation_notes": [
+    "英文只规范 PDF 提取产生的空白，不改词句、标点或大小写。",
+    "中文是人工对应译文，不宣称逐字等同英文；保留 should/must、程度、and/or 和适用范围。",
+    "中文将 Section 4.0 / 5.3 交叉引用改为相应规则名称，避免与技能自身章节编号混淆；维护记录的英文保留原始编号。",
+    "评分定义之外的解释、限制、例外继续生效，另列为补充细则。",
+    "源文件为用户提供的固定版本；未声称是官网最新版本。本次未运行网页模型评分测试。"
+  ]
+}
