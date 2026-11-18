@@ -1,0 +1,63 @@
+name: 工作日报
+
+on:
+  schedule:
+    # Sunday–Thursday at 16:00 UTC is Monday–Friday at 00:00 in Beijing.
+    - cron: '0 16 * * 0-4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: work-log-daily-report
+  cancel-in-progress: false
+
+jobs:
+  daily-report:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 验证工作日、补写和重复运行
+        run: python3 -m unittest discover -s scripts -p 'test_daily_report.py' -v
+
+      - name: 汇总并发布
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # A rerun uses its original run date even if it is retried days later.
+          run_at=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --jq .created_at)
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          for attempt in 1 2 3; do
+            git fetch --no-tags origin refs/heads/main
+            git switch -C daily-report-work FETCH_HEAD
+            python3 scripts/daily_report.py --run-at "$run_at"
+            git add -- daily/
+            if git diff --cached --quiet; then
+              if [[ "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+                git push --dry-run origin HEAD:refs/heads/main
+              fi
+              echo "日报与索引已齐。"
+              exit 0
+            fi
+            git diff --cached --check
+            git commit -m '日报：自动汇总工作进展'
+            if git push origin HEAD:refs/heads/main; then
+              git fetch --no-tags origin refs/heads/main
+              git merge-base --is-ancestor HEAD FETCH_HEAD
+              exit 0
+            fi
+            echo "第 $attempt 次推送未成功，将从远端最新内容重新生成。"
+          done
+          exit 1
